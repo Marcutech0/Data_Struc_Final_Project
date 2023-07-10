@@ -15,6 +15,7 @@ namespace POS_FO
 
         public static string GetXamppControlPath()
         {
+            //hi 
             string currentDirectory = Directory.GetCurrentDirectory();
             string xamppRelativePath = "XAMPP";  // Adjust the relative path
             string xamppControlPath = Path.Combine(currentDirectory, xamppRelativePath, "xampp-control.exe");
