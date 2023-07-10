@@ -159,6 +159,7 @@
             button11.TabIndex = 9;
             button11.Text = "Enter";
             button11.UseVisualStyleBackColor = false;
+            button11.Click += button11_Click;
             // 
             // button10
             // 
