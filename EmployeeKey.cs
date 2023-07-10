@@ -1,6 +1,8 @@
 using MySql.Data.MySqlClient;
 using System.Data;
 using System.Windows.Forms;
+using System.Diagnostics;
+using System.IO;
 
 namespace POS_FO
 {
@@ -11,9 +13,26 @@ namespace POS_FO
         private const string ConnectionString = "Server=localhost;Port=3306;Database=pos;Uid=root;Password=";
 
 
+        public static string GetXamppControlPath()
+        {
+            string currentDirectory = Directory.GetCurrentDirectory();
+            string xamppRelativePath = "XAMPP";  // Adjust the relative path
+            string xamppControlPath = Path.Combine(currentDirectory, xamppRelativePath, "xampp-control.exe");
+            return xamppControlPath;
+        }
 
+        public static void StartMySQLServer()
+        {
+        string xamppControlPath = GetXamppControlPath();
+
+        Process process = new Process();
+        process.StartInfo.FileName = xamppControlPath;
+        process.StartInfo.Arguments = "start mysql";
+        process.Start();
+        }
         public EmployeeKey()
         {
+            StartMySQLServer();
             InitializeComponent();
             connection = new MySqlConnection(ConnectionString);
         }
