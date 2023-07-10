@@ -30,24 +30,29 @@ namespace POS_FO.UserControls
 
         private void addbtn_Click(object sender, EventArgs e)
         {
-            
             List<string[]> extractedData = new List<string[]>();
             foreach (DataGridViewRow row in dataGridView1.Rows)
             {
                 string[] rowData = new string[dataGridView1.Columns.Count];
+                bool hasData = false;
                 for (int i = 0; i < dataGridView1.Columns.Count; i++)
                 {
-                    rowData[i] = row.Cells[i].Value?.ToString();  
+                    rowData[i] = row.Cells[i].Value?.ToString();
+                    if (!string.IsNullOrEmpty(rowData[i]))
+                    {
+                        hasData = true;
+                    }
                 }
-                extractedData.Add(rowData);
+                if (hasData)
+                {
+                    extractedData.Add(rowData);
+                }
             }
 
-            
             using (MySqlConnection connection = new MySqlConnection(ConnectionString))
             {
                 connection.Open();
 
-                
                 string insertQuery = "INSERT INTO products (productName, productCategory, productQuantity, productPrice) VALUES (@name, @category, @quantity, @price)";
 
                 foreach (string[] rowData in extractedData)
@@ -59,11 +64,14 @@ namespace POS_FO.UserControls
                         command.Parameters.AddWithValue("@quantity", rowData[2]);
                         command.Parameters.AddWithValue("@price", rowData[3]);
 
-                        command.ExecuteNonQuery();   
+                        command.ExecuteNonQuery();
                     }
                 }
             }
 
+            dataGridView1.Rows.Clear();
+            MessageBox.Show("Products are Successfully added.");
         }
+
     }
 }
