@@ -101,6 +101,7 @@
             addbtn.TabIndex = 1;
             addbtn.Text = "Add";
             addbtn.UseVisualStyleBackColor = false;
+            addbtn.Click += addbtn_Click;
             // 
             // label1
             // 
