@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace POS_FO.UserControls
 {
-    public partial class Categories : UserControl
+    public partial class Stocks : UserControl
     {
-        public Categories()
+        public Stocks()
         {
             InitializeComponent();
         }

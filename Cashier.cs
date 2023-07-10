@@ -11,7 +11,7 @@ using MySql.Data.MySqlClient;
 using POS_FO.UserControls;
 
 namespace POS_FO
-{ 
+{
     public partial class Cashier : Form
     {
         public Cashier()
@@ -26,7 +26,7 @@ namespace POS_FO
 
         private void Cashier_Load(object sender, EventArgs e)
         {
-            categories1.Visible = true;
+            categories1.Visible = false;
             coupon1.Visible = false;
             helpPage1.Visible = false;
             salesLog1.Visible = false;
@@ -36,12 +36,7 @@ namespace POS_FO
 
         private void categoriesButton_Click(object sender, EventArgs e)
         {
-            categories1.Visible = true;
-            coupon1.Visible = false;
-            helpPage1.Visible = false;
-            salesLog1.Visible = false;
-            addItems1.Visible = false;
-            paymentPage1.Visible = false;
+
         }
 
         private void couponButton_Click(object sender, EventArgs e)
@@ -66,12 +61,6 @@ namespace POS_FO
 
         private void addItemButton_Click(object sender, EventArgs e)
         {
-            categories1.Visible = false;
-            coupon1.Visible = false;
-            helpPage1.Visible = false;
-            salesLog1.Visible = false;
-            addItems1.Visible = true;
-            paymentPage1.Visible = false;
         }
 
         private void helpButton_Click(object sender, EventArgs e)
@@ -84,15 +73,6 @@ namespace POS_FO
             paymentPage1.Visible = false;
         }
 
-        private void paymentButton_Click(object sender, EventArgs e)
-        {
-            categories1.Visible = false;
-            coupon1.Visible = false;
-            helpPage1.Visible = false;
-            salesLog1.Visible = false;
-            addItems1.Visible = false;
-            paymentPage1.Visible = true;
-        }
 
         private void paymentPage1_Load(object sender, EventArgs e)
         {
@@ -107,7 +87,7 @@ namespace POS_FO
 
         private void label2_Click(object sender, EventArgs e)
         {
-           
+
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -172,9 +152,47 @@ namespace POS_FO
 
         private void categoriesButton_Click_1(object sender, EventArgs e)
         {
-            paymentPage1.Controls.Clear();
-            Categories categories = new Categories();
-            paymentPage1.Controls.Add(categories);
+            Stocks stock = new Stocks();
+            addUserControl(stock);
+
+        }
+
+        private void salesLogButton2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void addItemButton_Click_1(object sender, EventArgs e)
+        {
+            AddItems add_items = new AddItems();
+            addUserControl(add_items);
+
+        }
+
+        private void addUserControl(UserControl userControl)
+        {
+            ucPanel.Controls.Clear();
+            ucPanel.Controls.Add(userControl);
+            userControl.BringToFront();
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void paymentButton_Click_1(object sender, EventArgs e)
+        {
+            PaymentPage payment = new PaymentPage();
+            addUserControl(payment);
 
         }
     }

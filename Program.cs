@@ -1,3 +1,5 @@
+using POS_FO.UserControls;
+
 namespace POS_FO
 {
     internal static class Program
@@ -11,7 +13,7 @@ namespace POS_FO
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new EmployeeKey());
+            Application.Run(new Cashier());
         }
     }
 }
