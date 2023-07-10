@@ -28,524 +28,484 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.paymentPage1 = new POS_FO.UserControls.PaymentPage();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.helpPage1 = new POS_FO.UserControls.HelpPage();
-            this.addItems1 = new POS_FO.UserControls.AddItems();
-            this.salesLog1 = new POS_FO.UserControls.SalesLog();
-            this.coupon1 = new POS_FO.UserControls.Coupon();
-            this.categories1 = new POS_FO.UserControls.Categories();
-            this.paymentButton = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.button14 = new System.Windows.Forms.Button();
-            this.button13 = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.categoriesButton = new System.Windows.Forms.Button();
-            this.couponButton = new System.Windows.Forms.Button();
-            this.salesLogButton2 = new System.Windows.Forms.Button();
-            this.helpButton = new System.Windows.Forms.Button();
-            this.salesLogButton = new System.Windows.Forms.Button();
-            this.addItemButton = new System.Windows.Forms.Button();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel2.SuspendLayout();
-            this.panel10.SuspendLayout();
-            this.SuspendLayout();
+            ucPanel = new Panel();
+            paymentButton = new Button();
+            panel10 = new Panel();
+            button14 = new Button();
+            button13 = new Button();
+            label2 = new Label();
+            button11 = new Button();
+            button10 = new Button();
+            button9 = new Button();
+            button8 = new Button();
+            button7 = new Button();
+            button6 = new Button();
+            button5 = new Button();
+            button4 = new Button();
+            button3 = new Button();
+            button2 = new Button();
+            button1 = new Button();
+            stocksButton = new Button();
+            couponButton = new Button();
+            salesLogButton2 = new Button();
+            helpButton = new Button();
+            salesLogButton = new Button();
+            addItemButton = new Button();
+            panel3 = new Panel();
+            label6 = new Label();
+            label5 = new Label();
+            label4 = new Label();
+            label3 = new Label();
+            label1 = new Label();
+            label7 = new Label();
+            panel10.SuspendLayout();
+            panel3.SuspendLayout();
+            SuspendLayout();
             // 
-            // panel1
+            // ucPanel
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(175)))), ((int)(((byte)(126)))));
-            this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Location = new System.Drawing.Point(12, 12);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(586, 61);
-            this.panel1.TabIndex = 0;
-            // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(175)))), ((int)(((byte)(126)))));
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox1.Location = new System.Drawing.Point(56, 13);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(516, 29);
-            this.textBox1.TabIndex = 1;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::POS_FO.Properties.Resources.search_13_64;
-            this.pictureBox1.Location = new System.Drawing.Point(13, 13);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(37, 34);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(175)))), ((int)(((byte)(126)))));
-            this.panel2.Controls.Add(this.paymentPage1);
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.panel4);
-            this.panel2.Controls.Add(this.helpPage1);
-            this.panel2.Controls.Add(this.addItems1);
-            this.panel2.Controls.Add(this.salesLog1);
-            this.panel2.Controls.Add(this.coupon1);
-            this.panel2.Controls.Add(this.categories1);
-            this.panel2.Controls.Add(this.paymentButton);
-            this.panel2.Location = new System.Drawing.Point(12, 99);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(586, 608);
-            this.panel2.TabIndex = 1;
-            // 
-            // paymentPage1
-            // 
-            this.paymentPage1.Location = new System.Drawing.Point(13, 15);
-            this.paymentPage1.Name = "paymentPage1";
-            this.paymentPage1.Size = new System.Drawing.Size(559, 396);
-            this.paymentPage1.TabIndex = 18;
-            this.paymentPage1.Load += new System.EventHandler(this.paymentPage1_Load);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Nirmala UI", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(21, 518);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(105, 37);
-            this.label1.TabIndex = 17;
-            this.label1.Text = "TOTAL:";
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(143)))), ((int)(((byte)(105)))));
-            this.panel4.Location = new System.Drawing.Point(21, 473);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(536, 10);
-            this.panel4.TabIndex = 16;
-            // 
-            // helpPage1
-            // 
-            this.helpPage1.Location = new System.Drawing.Point(13, 15);
-            this.helpPage1.Name = "helpPage1";
-            this.helpPage1.Size = new System.Drawing.Size(559, 396);
-            this.helpPage1.TabIndex = 15;
-            // 
-            // addItems1
-            // 
-            this.addItems1.Location = new System.Drawing.Point(13, 15);
-            this.addItems1.Name = "addItems1";
-            this.addItems1.Size = new System.Drawing.Size(559, 396);
-            this.addItems1.TabIndex = 14;
-            // 
-            // salesLog1
-            // 
-            this.salesLog1.Location = new System.Drawing.Point(13, 15);
-            this.salesLog1.Name = "salesLog1";
-            this.salesLog1.Size = new System.Drawing.Size(559, 396);
-            this.salesLog1.TabIndex = 13;
-            // 
-            // coupon1
-            // 
-            this.coupon1.Location = new System.Drawing.Point(13, 15);
-            this.coupon1.Name = "coupon1";
-            this.coupon1.Size = new System.Drawing.Size(559, 396);
-            this.coupon1.TabIndex = 12;
-            // 
-            // categories1
-            // 
-            this.categories1.Location = new System.Drawing.Point(13, 15);
-            this.categories1.Name = "categories1";
-            this.categories1.Size = new System.Drawing.Size(559, 396);
-            this.categories1.TabIndex = 11;
+            ucPanel.BackColor = Color.FromArgb(169, 175, 126);
+            ucPanel.Location = new Point(12, 79);
+            ucPanel.Name = "ucPanel";
+            ucPanel.Size = new Size(569, 628);
+            ucPanel.TabIndex = 1;
             // 
             // paymentButton
             // 
-            this.paymentButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(143)))), ((int)(((byte)(105)))));
-            this.paymentButton.FlatAppearance.BorderSize = 0;
-            this.paymentButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.paymentButton.Font = new System.Drawing.Font("Nirmala UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.paymentButton.ForeColor = System.Drawing.Color.White;
-            this.paymentButton.Location = new System.Drawing.Point(373, 489);
-            this.paymentButton.Name = "paymentButton";
-            this.paymentButton.Size = new System.Drawing.Size(183, 100);
-            this.paymentButton.TabIndex = 10;
-            this.paymentButton.Text = "PAYMENT TIME";
-            this.paymentButton.UseVisualStyleBackColor = false;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(175)))), ((int)(((byte)(126)))));
-            this.panel3.Location = new System.Drawing.Point(620, 12);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(376, 61);
-            this.panel3.TabIndex = 1;
+            paymentButton.BackColor = Color.FromArgb(169, 175, 126);
+            paymentButton.FlatAppearance.BorderSize = 0;
+            paymentButton.FlatStyle = FlatStyle.Flat;
+            paymentButton.Font = new Font("Nirmala UI", 15F, FontStyle.Bold, GraphicsUnit.Point);
+            paymentButton.ForeColor = Color.White;
+            paymentButton.Location = new Point(587, 438);
+            paymentButton.Name = "paymentButton";
+            paymentButton.Size = new Size(109, 95);
+            paymentButton.TabIndex = 10;
+            paymentButton.Text = "Pay";
+            paymentButton.UseVisualStyleBackColor = false;
+            paymentButton.Click += paymentButton_Click_1;
             // 
             // panel10
             // 
-            this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(175)))), ((int)(((byte)(126)))));
-            this.panel10.Controls.Add(this.button14);
-            this.panel10.Controls.Add(this.button13);
-            this.panel10.Controls.Add(this.label2);
-            this.panel10.Controls.Add(this.button11);
-            this.panel10.Controls.Add(this.button10);
-            this.panel10.Controls.Add(this.button9);
-            this.panel10.Controls.Add(this.button8);
-            this.panel10.Controls.Add(this.button7);
-            this.panel10.Controls.Add(this.button6);
-            this.panel10.Controls.Add(this.button5);
-            this.panel10.Controls.Add(this.button4);
-            this.panel10.Controls.Add(this.button3);
-            this.panel10.Controls.Add(this.button2);
-            this.panel10.Controls.Add(this.button1);
-            this.panel10.Location = new System.Drawing.Point(620, 338);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(376, 369);
-            this.panel10.TabIndex = 4;
+            panel10.BackColor = Color.FromArgb(169, 175, 126);
+            panel10.Controls.Add(button14);
+            panel10.Controls.Add(button13);
+            panel10.Controls.Add(label2);
+            panel10.Controls.Add(button11);
+            panel10.Controls.Add(button10);
+            panel10.Controls.Add(button9);
+            panel10.Controls.Add(button8);
+            panel10.Controls.Add(button7);
+            panel10.Controls.Add(button6);
+            panel10.Controls.Add(button5);
+            panel10.Controls.Add(button4);
+            panel10.Controls.Add(button3);
+            panel10.Controls.Add(button2);
+            panel10.Controls.Add(button1);
+            panel10.Location = new Point(702, 12);
+            panel10.Name = "panel10";
+            panel10.Size = new Size(376, 408);
+            panel10.TabIndex = 4;
             // 
             // button14
             // 
-            this.button14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(143)))), ((int)(((byte)(105)))));
-            this.button14.FlatAppearance.BorderSize = 0;
-            this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button14.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button14.ForeColor = System.Drawing.Color.White;
-            this.button14.Location = new System.Drawing.Point(257, 250);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(98, 50);
-            this.button14.TabIndex = 13;
-            this.button14.Text = "C";
-            this.button14.UseVisualStyleBackColor = false;
-            this.button14.Click += new System.EventHandler(this.button14_Click);
+            button14.BackColor = Color.FromArgb(125, 143, 105);
+            button14.FlatAppearance.BorderSize = 0;
+            button14.FlatStyle = FlatStyle.Flat;
+            button14.Font = new Font("Nirmala UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button14.ForeColor = Color.White;
+            button14.Location = new Point(257, 259);
+            button14.Name = "button14";
+            button14.Size = new Size(98, 66);
+            button14.TabIndex = 13;
+            button14.Text = "C";
+            button14.UseVisualStyleBackColor = false;
+            button14.Click += button14_Click;
             // 
             // button13
             // 
-            this.button13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(143)))), ((int)(((byte)(105)))));
-            this.button13.FlatAppearance.BorderSize = 0;
-            this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button13.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button13.ForeColor = System.Drawing.Color.White;
-            this.button13.Location = new System.Drawing.Point(26, 250);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(98, 50);
-            this.button13.TabIndex = 12;
-            this.button13.Text = ".";
-            this.button13.UseVisualStyleBackColor = false;
-            this.button13.Click += new System.EventHandler(this.button13_Click_1);
+            button13.BackColor = Color.FromArgb(125, 143, 105);
+            button13.FlatAppearance.BorderSize = 0;
+            button13.FlatStyle = FlatStyle.Flat;
+            button13.Font = new Font("Nirmala UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button13.ForeColor = Color.White;
+            button13.Location = new Point(26, 259);
+            button13.Name = "button13";
+            button13.Size = new Size(98, 66);
+            button13.TabIndex = 12;
+            button13.Text = ".";
+            button13.UseVisualStyleBackColor = false;
+            button13.Click += button13_Click_1;
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(26, 9);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(0, 15);
-            this.label2.TabIndex = 11;
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            label2.AutoSize = true;
+            label2.Location = new Point(26, 9);
+            label2.Name = "label2";
+            label2.Size = new Size(0, 15);
+            label2.TabIndex = 11;
+            label2.Click += label2_Click;
             // 
             // button11
             // 
-            this.button11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(143)))), ((int)(((byte)(105)))));
-            this.button11.FlatAppearance.BorderSize = 0;
-            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button11.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button11.ForeColor = System.Drawing.Color.White;
-            this.button11.Location = new System.Drawing.Point(143, 318);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(98, 32);
-            this.button11.TabIndex = 9;
-            this.button11.Text = "Enter";
-            this.button11.UseVisualStyleBackColor = false;
+            button11.BackColor = Color.FromArgb(125, 143, 105);
+            button11.FlatAppearance.BorderSize = 0;
+            button11.FlatStyle = FlatStyle.Flat;
+            button11.Font = new Font("Nirmala UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button11.ForeColor = Color.White;
+            button11.Location = new Point(26, 339);
+            button11.Name = "button11";
+            button11.Size = new Size(329, 53);
+            button11.TabIndex = 9;
+            button11.Text = "Enter";
+            button11.UseVisualStyleBackColor = false;
             // 
             // button10
             // 
-            this.button10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(143)))), ((int)(((byte)(105)))));
-            this.button10.FlatAppearance.BorderSize = 0;
-            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button10.ForeColor = System.Drawing.Color.White;
-            this.button10.Location = new System.Drawing.Point(143, 250);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(98, 50);
-            this.button10.TabIndex = 5;
-            this.button10.Text = "0";
-            this.button10.UseVisualStyleBackColor = false;
-            this.button10.Click += new System.EventHandler(this.button10_Click);
+            button10.BackColor = Color.FromArgb(125, 143, 105);
+            button10.FlatAppearance.BorderSize = 0;
+            button10.FlatStyle = FlatStyle.Flat;
+            button10.Font = new Font("Nirmala UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button10.ForeColor = Color.White;
+            button10.Location = new Point(143, 259);
+            button10.Name = "button10";
+            button10.Size = new Size(98, 66);
+            button10.TabIndex = 5;
+            button10.Text = "0";
+            button10.UseVisualStyleBackColor = false;
+            button10.Click += button10_Click;
             // 
             // button9
             // 
-            this.button9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(143)))), ((int)(((byte)(105)))));
-            this.button9.FlatAppearance.BorderSize = 0;
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button9.ForeColor = System.Drawing.Color.White;
-            this.button9.Location = new System.Drawing.Point(257, 179);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(98, 50);
-            this.button9.TabIndex = 8;
-            this.button9.Text = "9";
-            this.button9.UseVisualStyleBackColor = false;
-            this.button9.Click += new System.EventHandler(this.button9_Click);
+            button9.BackColor = Color.FromArgb(125, 143, 105);
+            button9.FlatAppearance.BorderSize = 0;
+            button9.FlatStyle = FlatStyle.Flat;
+            button9.Font = new Font("Nirmala UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button9.ForeColor = Color.White;
+            button9.Location = new Point(257, 43);
+            button9.Name = "button9";
+            button9.Size = new Size(98, 66);
+            button9.TabIndex = 8;
+            button9.Text = "9";
+            button9.UseVisualStyleBackColor = false;
+            button9.Click += button9_Click;
             // 
             // button8
             // 
-            this.button8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(143)))), ((int)(((byte)(105)))));
-            this.button8.FlatAppearance.BorderSize = 0;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button8.ForeColor = System.Drawing.Color.White;
-            this.button8.Location = new System.Drawing.Point(143, 179);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(98, 50);
-            this.button8.TabIndex = 7;
-            this.button8.Text = "8";
-            this.button8.UseVisualStyleBackColor = false;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
+            button8.BackColor = Color.FromArgb(125, 143, 105);
+            button8.FlatAppearance.BorderSize = 0;
+            button8.FlatStyle = FlatStyle.Flat;
+            button8.Font = new Font("Nirmala UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button8.ForeColor = Color.White;
+            button8.Location = new Point(143, 43);
+            button8.Name = "button8";
+            button8.Size = new Size(98, 66);
+            button8.TabIndex = 7;
+            button8.Text = "8";
+            button8.UseVisualStyleBackColor = false;
+            button8.Click += button8_Click;
             // 
             // button7
             // 
-            this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(143)))), ((int)(((byte)(105)))));
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button7.ForeColor = System.Drawing.Color.White;
-            this.button7.Location = new System.Drawing.Point(26, 179);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(98, 50);
-            this.button7.TabIndex = 6;
-            this.button7.Text = "7";
-            this.button7.UseVisualStyleBackColor = false;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
+            button7.BackColor = Color.FromArgb(125, 143, 105);
+            button7.FlatAppearance.BorderSize = 0;
+            button7.FlatStyle = FlatStyle.Flat;
+            button7.Font = new Font("Nirmala UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button7.ForeColor = Color.White;
+            button7.Location = new Point(26, 43);
+            button7.Name = "button7";
+            button7.Size = new Size(98, 66);
+            button7.TabIndex = 6;
+            button7.Text = "7";
+            button7.UseVisualStyleBackColor = false;
+            button7.Click += button7_Click;
             // 
             // button6
             // 
-            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(143)))), ((int)(((byte)(105)))));
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Location = new System.Drawing.Point(257, 109);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(98, 50);
-            this.button6.TabIndex = 5;
-            this.button6.Text = "6";
-            this.button6.UseVisualStyleBackColor = false;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            button6.BackColor = Color.FromArgb(125, 143, 105);
+            button6.FlatAppearance.BorderSize = 0;
+            button6.FlatStyle = FlatStyle.Flat;
+            button6.Font = new Font("Nirmala UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button6.ForeColor = Color.White;
+            button6.Location = new Point(257, 115);
+            button6.Name = "button6";
+            button6.Size = new Size(98, 66);
+            button6.TabIndex = 5;
+            button6.Text = "6";
+            button6.UseVisualStyleBackColor = false;
+            button6.Click += button6_Click;
             // 
             // button5
             // 
-            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(143)))), ((int)(((byte)(105)))));
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(143, 109);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(98, 50);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "5";
-            this.button5.UseVisualStyleBackColor = false;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            button5.BackColor = Color.FromArgb(125, 143, 105);
+            button5.FlatAppearance.BorderSize = 0;
+            button5.FlatStyle = FlatStyle.Flat;
+            button5.Font = new Font("Nirmala UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button5.ForeColor = Color.White;
+            button5.Location = new Point(143, 115);
+            button5.Name = "button5";
+            button5.Size = new Size(98, 66);
+            button5.TabIndex = 4;
+            button5.Text = "5";
+            button5.UseVisualStyleBackColor = false;
+            button5.Click += button5_Click;
             // 
             // button4
             // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(143)))), ((int)(((byte)(105)))));
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(26, 109);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(98, 50);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "4";
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            button4.BackColor = Color.FromArgb(125, 143, 105);
+            button4.FlatAppearance.BorderSize = 0;
+            button4.FlatStyle = FlatStyle.Flat;
+            button4.Font = new Font("Nirmala UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button4.ForeColor = Color.White;
+            button4.Location = new Point(26, 115);
+            button4.Name = "button4";
+            button4.Size = new Size(98, 66);
+            button4.TabIndex = 3;
+            button4.Text = "4";
+            button4.UseVisualStyleBackColor = false;
+            button4.Click += button4_Click;
             // 
             // button3
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(143)))), ((int)(((byte)(105)))));
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(257, 37);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(98, 50);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "3";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            button3.BackColor = Color.FromArgb(125, 143, 105);
+            button3.FlatAppearance.BorderSize = 0;
+            button3.FlatStyle = FlatStyle.Flat;
+            button3.Font = new Font("Nirmala UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button3.ForeColor = Color.White;
+            button3.Location = new Point(257, 187);
+            button3.Name = "button3";
+            button3.Size = new Size(98, 66);
+            button3.TabIndex = 2;
+            button3.Text = "3";
+            button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click;
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(143)))), ((int)(((byte)(105)))));
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(143, 37);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(98, 50);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "2";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            button2.BackColor = Color.FromArgb(125, 143, 105);
+            button2.FlatAppearance.BorderSize = 0;
+            button2.FlatStyle = FlatStyle.Flat;
+            button2.Font = new Font("Nirmala UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button2.ForeColor = Color.White;
+            button2.Location = new Point(143, 187);
+            button2.Name = "button2";
+            button2.Size = new Size(98, 66);
+            button2.TabIndex = 1;
+            button2.Text = "2";
+            button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(143)))), ((int)(((byte)(105)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(26, 37);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(98, 50);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "1";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            button1.BackColor = Color.FromArgb(125, 143, 105);
+            button1.FlatAppearance.BorderSize = 0;
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.Font = new Font("Nirmala UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button1.ForeColor = Color.White;
+            button1.Location = new Point(26, 187);
+            button1.Name = "button1";
+            button1.Size = new Size(98, 66);
+            button1.TabIndex = 0;
+            button1.Text = "1";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
-            // categoriesButton
+            // stocksButton
             // 
-            this.categoriesButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(175)))), ((int)(((byte)(126)))));
-            this.categoriesButton.FlatAppearance.BorderSize = 0;
-            this.categoriesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.categoriesButton.Font = new System.Drawing.Font("Nirmala UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.categoriesButton.ForeColor = System.Drawing.Color.White;
-            this.categoriesButton.Location = new System.Drawing.Point(620, 99);
-            this.categoriesButton.Name = "categoriesButton";
-            this.categoriesButton.Size = new System.Drawing.Size(183, 61);
-            this.categoriesButton.TabIndex = 0;
-            this.categoriesButton.Text = "Categories";
-            this.categoriesButton.UseVisualStyleBackColor = false;
-            this.categoriesButton.Click += new System.EventHandler(this.categoriesButton_Click_1);
+            stocksButton.BackColor = Color.FromArgb(169, 175, 126);
+            stocksButton.FlatAppearance.BorderSize = 0;
+            stocksButton.FlatStyle = FlatStyle.Flat;
+            stocksButton.Font = new Font("Nirmala UI", 15F, FontStyle.Bold, GraphicsUnit.Point);
+            stocksButton.ForeColor = Color.White;
+            stocksButton.Location = new Point(587, 79);
+            stocksButton.Name = "stocksButton";
+            stocksButton.Size = new Size(109, 92);
+            stocksButton.TabIndex = 0;
+            stocksButton.Text = "Stocks";
+            stocksButton.UseVisualStyleBackColor = false;
+            stocksButton.Click += categoriesButton_Click_1;
             // 
             // couponButton
             // 
-            this.couponButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(175)))), ((int)(((byte)(126)))));
-            this.couponButton.FlatAppearance.BorderSize = 0;
-            this.couponButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.couponButton.Font = new System.Drawing.Font("Nirmala UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.couponButton.ForeColor = System.Drawing.Color.White;
-            this.couponButton.Location = new System.Drawing.Point(813, 99);
-            this.couponButton.Name = "couponButton";
-            this.couponButton.Size = new System.Drawing.Size(183, 61);
-            this.couponButton.TabIndex = 5;
-            this.couponButton.Text = "Apply Coupon";
-            this.couponButton.UseVisualStyleBackColor = false;
+            couponButton.BackColor = Color.FromArgb(169, 175, 126);
+            couponButton.FlatAppearance.BorderSize = 0;
+            couponButton.FlatStyle = FlatStyle.Flat;
+            couponButton.Font = new Font("Nirmala UI", 15F, FontStyle.Bold, GraphicsUnit.Point);
+            couponButton.ForeColor = Color.White;
+            couponButton.Location = new Point(587, 351);
+            couponButton.Name = "couponButton";
+            couponButton.Size = new Size(109, 81);
+            couponButton.TabIndex = 5;
+            couponButton.Text = "Apply Discount";
+            couponButton.UseVisualStyleBackColor = false;
             // 
             // salesLogButton2
             // 
-            this.salesLogButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(175)))), ((int)(((byte)(126)))));
-            this.salesLogButton2.FlatAppearance.BorderSize = 0;
-            this.salesLogButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.salesLogButton2.Font = new System.Drawing.Font("Nirmala UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.salesLogButton2.ForeColor = System.Drawing.Color.White;
-            this.salesLogButton2.Location = new System.Drawing.Point(813, 175);
-            this.salesLogButton2.Name = "salesLogButton2";
-            this.salesLogButton2.Size = new System.Drawing.Size(183, 61);
-            this.salesLogButton2.TabIndex = 6;
-            this.salesLogButton2.Text = "Sales log";
-            this.salesLogButton2.UseVisualStyleBackColor = false;
+            salesLogButton2.BackColor = Color.FromArgb(169, 175, 126);
+            salesLogButton2.FlatAppearance.BorderSize = 0;
+            salesLogButton2.FlatStyle = FlatStyle.Flat;
+            salesLogButton2.Font = new Font("Nirmala UI", 15F, FontStyle.Bold, GraphicsUnit.Point);
+            salesLogButton2.ForeColor = Color.White;
+            salesLogButton2.Location = new Point(587, 177);
+            salesLogButton2.Name = "salesLogButton2";
+            salesLogButton2.Size = new Size(109, 81);
+            salesLogButton2.TabIndex = 6;
+            salesLogButton2.Text = "Sales log";
+            salesLogButton2.UseVisualStyleBackColor = false;
+            salesLogButton2.Click += salesLogButton2_Click;
             // 
             // helpButton
             // 
-            this.helpButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(175)))), ((int)(((byte)(126)))));
-            this.helpButton.FlatAppearance.BorderSize = 0;
-            this.helpButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.helpButton.Font = new System.Drawing.Font("Nirmala UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.helpButton.ForeColor = System.Drawing.Color.White;
-            this.helpButton.Location = new System.Drawing.Point(813, 253);
-            this.helpButton.Name = "helpButton";
-            this.helpButton.Size = new System.Drawing.Size(183, 61);
-            this.helpButton.TabIndex = 7;
-            this.helpButton.Text = "Help";
-            this.helpButton.UseVisualStyleBackColor = false;
+            helpButton.BackColor = Color.FromArgb(169, 175, 126);
+            helpButton.FlatAppearance.BorderSize = 0;
+            helpButton.FlatStyle = FlatStyle.Flat;
+            helpButton.Font = new Font("Nirmala UI", 15F, FontStyle.Bold, GraphicsUnit.Point);
+            helpButton.ForeColor = Color.White;
+            helpButton.Location = new Point(587, 626);
+            helpButton.Name = "helpButton";
+            helpButton.Size = new Size(109, 81);
+            helpButton.TabIndex = 7;
+            helpButton.Text = "Help";
+            helpButton.UseVisualStyleBackColor = false;
             // 
             // salesLogButton
             // 
-            this.salesLogButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(175)))), ((int)(((byte)(126)))));
-            this.salesLogButton.FlatAppearance.BorderSize = 0;
-            this.salesLogButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.salesLogButton.Font = new System.Drawing.Font("Nirmala UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.salesLogButton.ForeColor = System.Drawing.Color.White;
-            this.salesLogButton.Location = new System.Drawing.Point(620, 175);
-            this.salesLogButton.Name = "salesLogButton";
-            this.salesLogButton.Size = new System.Drawing.Size(183, 61);
-            this.salesLogButton.TabIndex = 8;
-            this.salesLogButton.Text = "Sales log";
-            this.salesLogButton.UseVisualStyleBackColor = false;
+            salesLogButton.BackColor = Color.FromArgb(169, 175, 126);
+            salesLogButton.FlatAppearance.BorderSize = 0;
+            salesLogButton.FlatStyle = FlatStyle.Flat;
+            salesLogButton.Font = new Font("Nirmala UI", 15F, FontStyle.Bold, GraphicsUnit.Point);
+            salesLogButton.ForeColor = Color.White;
+            salesLogButton.Location = new Point(587, 539);
+            salesLogButton.Name = "salesLogButton";
+            salesLogButton.Size = new Size(109, 81);
+            salesLogButton.TabIndex = 8;
+            salesLogButton.Text = "Exit";
+            salesLogButton.UseVisualStyleBackColor = false;
             // 
             // addItemButton
             // 
-            this.addItemButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(175)))), ((int)(((byte)(126)))));
-            this.addItemButton.FlatAppearance.BorderSize = 0;
-            this.addItemButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.addItemButton.Font = new System.Drawing.Font("Nirmala UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.addItemButton.ForeColor = System.Drawing.Color.White;
-            this.addItemButton.Location = new System.Drawing.Point(620, 253);
-            this.addItemButton.Name = "addItemButton";
-            this.addItemButton.Size = new System.Drawing.Size(183, 61);
-            this.addItemButton.TabIndex = 9;
-            this.addItemButton.Text = "Add Item";
-            this.addItemButton.UseVisualStyleBackColor = false;
+            addItemButton.BackColor = Color.FromArgb(169, 175, 126);
+            addItemButton.FlatAppearance.BorderSize = 0;
+            addItemButton.FlatStyle = FlatStyle.Flat;
+            addItemButton.Font = new Font("Nirmala UI", 15F, FontStyle.Bold, GraphicsUnit.Point);
+            addItemButton.ForeColor = Color.White;
+            addItemButton.Location = new Point(587, 264);
+            addItemButton.Name = "addItemButton";
+            addItemButton.Size = new Size(109, 81);
+            addItemButton.TabIndex = 9;
+            addItemButton.Text = "Add Item";
+            addItemButton.UseVisualStyleBackColor = false;
+            addItemButton.Click += addItemButton_Click_1;
+            // 
+            // panel3
+            // 
+            panel3.BackColor = Color.FromArgb(169, 175, 126);
+            panel3.Controls.Add(label6);
+            panel3.Controls.Add(label5);
+            panel3.Controls.Add(label4);
+            panel3.Controls.Add(label3);
+            panel3.Controls.Add(label1);
+            panel3.Location = new Point(702, 426);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(376, 281);
+            panel3.TabIndex = 2;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Nirmala UI", 11F, FontStyle.Bold, GraphicsUnit.Point);
+            label6.ForeColor = Color.White;
+            label6.Location = new Point(26, 230);
+            label6.Name = "label6";
+            label6.Size = new Size(61, 20);
+            label6.TabIndex = 4;
+            label6.Text = "Change";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Nirmala UI", 11F, FontStyle.Bold, GraphicsUnit.Point);
+            label5.ForeColor = Color.White;
+            label5.Location = new Point(26, 171);
+            label5.Name = "label5";
+            label5.Size = new Size(43, 20);
+            label5.TabIndex = 3;
+            label5.Text = "Total";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Nirmala UI", 11F, FontStyle.Bold, GraphicsUnit.Point);
+            label4.ForeColor = Color.White;
+            label4.Location = new Point(26, 105);
+            label4.Name = "label4";
+            label4.Size = new Size(32, 20);
+            label4.TabIndex = 2;
+            label4.Text = "Tax";
+            label4.Click += label4_Click;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Nirmala UI", 11F, FontStyle.Bold, GraphicsUnit.Point);
+            label3.ForeColor = Color.White;
+            label3.Location = new Point(26, 70);
+            label3.Name = "label3";
+            label3.Size = new Size(156, 20);
+            label3.TabIndex = 1;
+            label3.Text = "Transaction Discount";
+            label3.Click += label3_Click;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Nirmala UI", 11F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.ForeColor = Color.White;
+            label1.Location = new Point(26, 30);
+            label1.Name = "label1";
+            label1.Size = new Size(73, 20);
+            label1.TabIndex = 0;
+            label1.Text = "Sub Total";
+            label1.Click += label1_Click;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Location = new Point(47, 28);
+            label7.Name = "label7";
+            label7.Size = new Size(66, 15);
+            label7.TabIndex = 11;
+            label7.Text = "store name";
             // 
             // Cashier
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(143)))), ((int)(((byte)(105)))));
-            this.ClientSize = new System.Drawing.Size(1008, 729);
-            this.Controls.Add(this.addItemButton);
-            this.Controls.Add(this.salesLogButton);
-            this.Controls.Add(this.helpButton);
-            this.Controls.Add(this.salesLogButton2);
-            this.Controls.Add(this.couponButton);
-            this.Controls.Add(this.categoriesButton);
-            this.Controls.Add(this.panel10);
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
-            this.Name = "Cashier";
-            this.Text = "Cashier";
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            this.panel10.ResumeLayout(false);
-            this.panel10.PerformLayout();
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(125, 143, 105);
+            ClientSize = new Size(1090, 729);
+            Controls.Add(label7);
+            Controls.Add(panel3);
+            Controls.Add(helpButton);
+            Controls.Add(addItemButton);
+            Controls.Add(paymentButton);
+            Controls.Add(salesLogButton);
+            Controls.Add(panel10);
+            Controls.Add(ucPanel);
+            Controls.Add(couponButton);
+            Controls.Add(stocksButton);
+            Controls.Add(salesLogButton2);
+            Name = "Cashier";
+            Text = "Cashier";
+            panel10.ResumeLayout(false);
+            panel10.PerformLayout();
+            panel3.ResumeLayout(false);
+            panel3.PerformLayout();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
-
-        private Panel panel1;
-        private Panel panel2;
-        private Panel panel3;
+        private Panel ucPanel;
         private Panel panel10;
         private Button button10;
         private Button button9;
@@ -557,26 +517,29 @@
         private Button button3;
         private Button button2;
         private Button button1;
-        private PictureBox pictureBox1;
         private Button button11;
-        private Button categoriesButton;
+        private Button stocksButton;
         private Button couponButton;
         private Button salesLogButton2;
         private Button helpButton;
         private Button salesLogButton;
         private Button addItemButton;
         private Button paymentButton;
-        private UserControls.Categories categories1;
+        private UserControls.Stocks categories1;
         private UserControls.Coupon coupon1;
         private UserControls.SalesLog salesLog1;
         private UserControls.AddItems addItems1;
         private UserControls.HelpPage helpPage1;
-        private TextBox textBox1;
-        private Label label1;
-        private Panel panel4;
         private UserControls.PaymentPage paymentPage1;
         private Label label2;
         private Button button13;
         private Button button14;
+        private Panel panel3;
+        private Label label6;
+        private Label label5;
+        private Label label4;
+        private Label label3;
+        private Label label1;
+        private Label label7;
     }
 }

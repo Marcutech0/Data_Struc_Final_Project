@@ -28,31 +28,121 @@
         /// </summary>
         private void InitializeComponent()
         {
-            AddItemsPage = new Label();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            dataGridView1 = new DataGridView();
+            description = new DataGridViewTextBoxColumn();
+            category = new DataGridViewTextBoxColumn();
+            qty = new DataGridViewTextBoxColumn();
+            price = new DataGridViewTextBoxColumn();
+            addbtn = new Button();
+            label1 = new Label();
+            comboBox1 = new ComboBox();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
-            // AddItemsPage
+            // dataGridView1
             // 
-            AddItemsPage.AutoSize = true;
-            AddItemsPage.Location = new Point(248, 171);
-            AddItemsPage.Name = "AddItemsPage";
-            AddItemsPage.Size = new Size(59, 15);
-            AddItemsPage.TabIndex = 0;
-            AddItemsPage.Text = "add items";
+            dataGridView1.BackgroundColor = Color.White;
+            dataGridView1.BorderStyle = BorderStyle.None;
+            dataGridView1.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(169, 175, 126);
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridView1.ColumnHeadersHeight = 30;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { description, category, qty, price });
+            dataGridView1.EnableHeadersVisualStyles = false;
+            dataGridView1.Location = new Point(0, 0);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowTemplate.Height = 25;
+            dataGridView1.Size = new Size(569, 574);
+            dataGridView1.TabIndex = 0;
+            // 
+            // description
+            // 
+            description.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            description.HeaderText = "Product Name";
+            description.Name = "description";
+            // 
+            // category
+            // 
+            category.HeaderText = "Category";
+            category.Name = "category";
+            // 
+            // qty
+            // 
+            qty.HeaderText = "Quantity";
+            qty.Name = "qty";
+            // 
+            // price
+            // 
+            price.HeaderText = "Price";
+            price.Name = "price";
+            // 
+            // addbtn
+            // 
+            addbtn.BackColor = Color.FromArgb(125, 143, 105);
+            addbtn.FlatAppearance.BorderSize = 0;
+            addbtn.FlatStyle = FlatStyle.Flat;
+            addbtn.Font = new Font("Nirmala UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            addbtn.ForeColor = Color.White;
+            addbtn.Location = new Point(12, 585);
+            addbtn.Name = "addbtn";
+            addbtn.Size = new Size(164, 28);
+            addbtn.TabIndex = 1;
+            addbtn.Text = "Add";
+            addbtn.UseVisualStyleBackColor = false;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Nirmala UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.ForeColor = Color.White;
+            label1.Location = new Point(295, 585);
+            label1.Name = "label1";
+            label1.Size = new Size(128, 21);
+            label1.TabIndex = 15;
+            label1.Text = "Payment Method";
+            // 
+            // comboBox1
+            // 
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Items.AddRange(new object[] { "Credit/Debit Card", "Cash", "Mobile Wallet" });
+            comboBox1.Location = new Point(429, 585);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(121, 23);
+            comboBox1.TabIndex = 14;
             // 
             // AddItems
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(AddItemsPage);
+            BackColor = Color.FromArgb(169, 175, 126);
+            Controls.Add(label1);
+            Controls.Add(comboBox1);
+            Controls.Add(addbtn);
+            Controls.Add(dataGridView1);
             Name = "AddItems";
-            Size = new Size(559, 396);
+            Size = new Size(569, 628);
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private Label AddItemsPage;
+        private DataGridView dataGridView1;
+        private Button addbtn;
+        private DataGridViewTextBoxColumn description;
+        private DataGridViewTextBoxColumn category;
+        private DataGridViewTextBoxColumn qty;
+        private DataGridViewTextBoxColumn price;
+        private Label label1;
+        private ComboBox comboBox1;
     }
 }
