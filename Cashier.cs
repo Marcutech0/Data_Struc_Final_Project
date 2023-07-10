@@ -195,5 +195,10 @@ namespace POS_FO
             addUserControl(payment);
 
         }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

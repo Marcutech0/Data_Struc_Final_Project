@@ -31,7 +31,7 @@
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             dataGridView1 = new DataGridView();
             description = new DataGridViewTextBoxColumn();
-            category = new DataGridViewTextBoxColumn();
+            category = new DataGridViewComboBoxColumn();
             qty = new DataGridViewTextBoxColumn();
             price = new DataGridViewTextBoxColumn();
             addbtn = new Button();
@@ -62,6 +62,7 @@
             dataGridView1.RowTemplate.Height = 25;
             dataGridView1.Size = new Size(569, 574);
             dataGridView1.TabIndex = 0;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // description
             // 
@@ -72,7 +73,10 @@
             // category
             // 
             category.HeaderText = "Category";
+            category.Items.AddRange(new object[] { "Dairy", "Drink", "Fruit", "Meal", "Snack", "Vegetable" });
             category.Name = "category";
+            category.Resizable = DataGridViewTriState.True;
+            category.SortMode = DataGridViewColumnSortMode.Automatic;
             // 
             // qty
             // 
@@ -139,10 +143,10 @@
         private DataGridView dataGridView1;
         private Button addbtn;
         private DataGridViewTextBoxColumn description;
-        private DataGridViewTextBoxColumn category;
         private DataGridViewTextBoxColumn qty;
         private DataGridViewTextBoxColumn price;
         private Label label1;
         private ComboBox comboBox1;
+        private DataGridViewComboBoxColumn category;
     }
 }
