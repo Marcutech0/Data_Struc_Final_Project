@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using POS_FO.UserControls;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace POS_FO
 {
@@ -199,6 +200,16 @@ namespace POS_FO
         private void button11_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void salesLogButton_Click_1(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Are you sure you want to exit the program?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                System.Windows.Forms.Application.Exit();
+            }
         }
     }
 }

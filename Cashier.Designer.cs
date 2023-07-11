@@ -47,9 +47,9 @@
             button1 = new Button();
             stocksButton = new Button();
             couponButton = new Button();
-            salesLogButton2 = new Button();
-            helpButton = new Button();
             salesLogButton = new Button();
+            helpButton = new Button();
+            Exit = new Button();
             addItemButton = new Button();
             panel3 = new Panel();
             label6 = new Label();
@@ -340,20 +340,20 @@
             couponButton.Text = "Apply Discount";
             couponButton.UseVisualStyleBackColor = false;
             // 
-            // salesLogButton2
+            // salesLogButton
             // 
-            salesLogButton2.BackColor = Color.FromArgb(169, 175, 126);
-            salesLogButton2.FlatAppearance.BorderSize = 0;
-            salesLogButton2.FlatStyle = FlatStyle.Flat;
-            salesLogButton2.Font = new Font("Nirmala UI", 15F, FontStyle.Bold, GraphicsUnit.Point);
-            salesLogButton2.ForeColor = Color.White;
-            salesLogButton2.Location = new Point(587, 177);
-            salesLogButton2.Name = "salesLogButton2";
-            salesLogButton2.Size = new Size(109, 81);
-            salesLogButton2.TabIndex = 6;
-            salesLogButton2.Text = "Sales log";
-            salesLogButton2.UseVisualStyleBackColor = false;
-            salesLogButton2.Click += salesLogButton2_Click;
+            salesLogButton.BackColor = Color.FromArgb(169, 175, 126);
+            salesLogButton.FlatAppearance.BorderSize = 0;
+            salesLogButton.FlatStyle = FlatStyle.Flat;
+            salesLogButton.Font = new Font("Nirmala UI", 15F, FontStyle.Bold, GraphicsUnit.Point);
+            salesLogButton.ForeColor = Color.White;
+            salesLogButton.Location = new Point(587, 177);
+            salesLogButton.Name = "salesLogButton";
+            salesLogButton.Size = new Size(109, 81);
+            salesLogButton.TabIndex = 6;
+            salesLogButton.Text = "Sales log";
+            salesLogButton.UseVisualStyleBackColor = false;
+            salesLogButton.Click += salesLogButton2_Click;
             // 
             // helpButton
             // 
@@ -369,19 +369,20 @@
             helpButton.Text = "Help";
             helpButton.UseVisualStyleBackColor = false;
             // 
-            // salesLogButton
+            // Exit
             // 
-            salesLogButton.BackColor = Color.FromArgb(169, 175, 126);
-            salesLogButton.FlatAppearance.BorderSize = 0;
-            salesLogButton.FlatStyle = FlatStyle.Flat;
-            salesLogButton.Font = new Font("Nirmala UI", 15F, FontStyle.Bold, GraphicsUnit.Point);
-            salesLogButton.ForeColor = Color.White;
-            salesLogButton.Location = new Point(587, 539);
-            salesLogButton.Name = "salesLogButton";
-            salesLogButton.Size = new Size(109, 81);
-            salesLogButton.TabIndex = 8;
-            salesLogButton.Text = "Exit";
-            salesLogButton.UseVisualStyleBackColor = false;
+            Exit.BackColor = Color.FromArgb(169, 175, 126);
+            Exit.FlatAppearance.BorderSize = 0;
+            Exit.FlatStyle = FlatStyle.Flat;
+            Exit.Font = new Font("Nirmala UI", 15F, FontStyle.Bold, GraphicsUnit.Point);
+            Exit.ForeColor = Color.White;
+            Exit.Location = new Point(587, 539);
+            Exit.Name = "Exit";
+            Exit.Size = new Size(109, 81);
+            Exit.TabIndex = 8;
+            Exit.Text = "Exit";
+            Exit.UseVisualStyleBackColor = false;
+            Exit.Click += salesLogButton_Click_1;
             // 
             // addItemButton
             // 
@@ -489,12 +490,12 @@
             Controls.Add(helpButton);
             Controls.Add(addItemButton);
             Controls.Add(paymentButton);
-            Controls.Add(salesLogButton);
+            Controls.Add(Exit);
             Controls.Add(panel10);
             Controls.Add(ucPanel);
             Controls.Add(couponButton);
             Controls.Add(stocksButton);
-            Controls.Add(salesLogButton2);
+            Controls.Add(salesLogButton);
             Name = "Cashier";
             Text = "Cashier";
             panel10.ResumeLayout(false);
@@ -521,9 +522,9 @@
         private Button button11;
         private Button stocksButton;
         private Button couponButton;
-        private Button salesLogButton2;
-        private Button helpButton;
         private Button salesLogButton;
+        private Button helpButton;
+        private Button Exit;
         private Button addItemButton;
         private Button paymentButton;
         private UserControls.Stocks categories1;
