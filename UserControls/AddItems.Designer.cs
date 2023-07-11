@@ -35,8 +35,6 @@
             qty = new DataGridViewTextBoxColumn();
             price = new DataGridViewTextBoxColumn();
             addbtn = new Button();
-            label1 = new Label();
-            comboBox1 = new ComboBox();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
@@ -44,7 +42,7 @@
             // 
             dataGridView1.BackgroundColor = Color.White;
             dataGridView1.BorderStyle = BorderStyle.None;
-            dataGridView1.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dataGridView1.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = Color.FromArgb(169, 175, 126);
             dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
@@ -95,48 +93,25 @@
             addbtn.FlatStyle = FlatStyle.Flat;
             addbtn.Font = new Font("Nirmala UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             addbtn.ForeColor = Color.White;
-            addbtn.Location = new Point(12, 585);
+            addbtn.Location = new Point(202, 580);
             addbtn.Name = "addbtn";
-            addbtn.Size = new Size(164, 28);
+            addbtn.Size = new Size(164, 33);
             addbtn.TabIndex = 1;
             addbtn.Text = "Add";
             addbtn.UseVisualStyleBackColor = false;
             addbtn.Click += addbtn_Click;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Nirmala UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.ForeColor = Color.White;
-            label1.Location = new Point(295, 585);
-            label1.Name = "label1";
-            label1.Size = new Size(128, 21);
-            label1.TabIndex = 15;
-            label1.Text = "Payment Method";
-            // 
-            // comboBox1
-            // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "Credit/Debit Card", "Cash", "Mobile Wallet" });
-            comboBox1.Location = new Point(429, 585);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(121, 23);
-            comboBox1.TabIndex = 14;
             // 
             // AddItems
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(169, 175, 126);
-            Controls.Add(label1);
-            Controls.Add(comboBox1);
             Controls.Add(addbtn);
             Controls.Add(dataGridView1);
             Name = "AddItems";
             Size = new Size(569, 628);
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
@@ -146,8 +121,6 @@
         private DataGridViewTextBoxColumn description;
         private DataGridViewTextBoxColumn qty;
         private DataGridViewTextBoxColumn price;
-        private Label label1;
-        private ComboBox comboBox1;
         private DataGridViewComboBoxColumn category;
     }
 }

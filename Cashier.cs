@@ -12,8 +12,10 @@ using POS_FO.UserControls;
 
 namespace POS_FO
 {
+
     public partial class Cashier : Form
     {
+        private Discount? discount;
         public Cashier()
         {
             InitializeComponent();
@@ -31,7 +33,6 @@ namespace POS_FO
             helpPage1.Visible = false;
             salesLog1.Visible = false;
             addItems1.Visible = false;
-            paymentPage1.Visible = false;
         }
 
         private void categoriesButton_Click(object sender, EventArgs e)
@@ -46,7 +47,6 @@ namespace POS_FO
             helpPage1.Visible = false;
             salesLog1.Visible = false;
             addItems1.Visible = false;
-            paymentPage1.Visible = false;
         }
 
         private void salesLogButton_Click(object sender, EventArgs e)
@@ -56,7 +56,6 @@ namespace POS_FO
             helpPage1.Visible = false;
             salesLog1.Visible = true;
             addItems1.Visible = false;
-            paymentPage1.Visible = false;
         }
 
         private void addItemButton_Click(object sender, EventArgs e)
@@ -70,7 +69,6 @@ namespace POS_FO
             helpPage1.Visible = true;
             salesLog1.Visible = false;
             addItems1.Visible = false;
-            paymentPage1.Visible = false;
         }
 
 
@@ -159,7 +157,8 @@ namespace POS_FO
 
         private void salesLogButton2_Click(object sender, EventArgs e)
         {
-
+            SalesLog salesLog = new SalesLog();
+            addUserControl(salesLog);
         }
 
         private void addItemButton_Click_1(object sender, EventArgs e)
@@ -189,16 +188,30 @@ namespace POS_FO
         {
         }
 
-        private void paymentButton_Click_1(object sender, EventArgs e)
-        {
-            PaymentPage payment = new PaymentPage();
-            addUserControl(payment);
-
-        }
 
         private void button11_Click(object sender, EventArgs e)
         {
 
         }
+
+        private void discountButton_Click_1(object sender, EventArgs e)
+        {
+            discount = new Discount();
+            discount.FormClosed += Discount_FormClosed;
+            discount.Show();
+
+            discountButton.Enabled = false;  // Disable the button when the form is shown
+        }
+
+        private void Discount_FormClosed(object? sender, FormClosedEventArgs e)
+        {
+            discountButton.Enabled = true;  // Enable the button when the form is closed
+        }
+
+        private void Cashier_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }

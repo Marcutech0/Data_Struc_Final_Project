@@ -63,6 +63,26 @@ namespace POS_FO.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_password_100 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-password-100", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_user_profile_100 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-user-profile-100", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap search_13_16 {
             get {
                 object obj = ResourceManager.GetObject("search-13-16", resourceCulture);
