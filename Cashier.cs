@@ -12,10 +12,30 @@ using POS_FO.UserControls;
 
 namespace POS_FO
 {
-
     public partial class Cashier : Form
     {
         private Discount? discount;
+
+        public void cashPayment()
+        {
+            double subTotalAmount, totalAmount, change;
+            double tax = 0.2;
+
+            double paymentValue = double.Parse(label2.Text);
+
+            // totalAmount = subTotalAmount + (tax * subTotalAmount);
+            // change = paymentValue - totalAmount;
+        }
+
+        public void cardPayment()
+        {
+
+        }
+
+        public void mobilewalletPayment()
+        {
+
+        }
         public Cashier()
         {
             InitializeComponent();
@@ -212,6 +232,28 @@ namespace POS_FO
         {
 
         }
+
+        private void button11_Click_1(object sender, EventArgs e)
+        {
+            string comboBoxOption = comboBox1.SelectedItem.ToString();
+
+            switch (comboBoxOption)
+            {
+                case "Credit/Debit Card":
+                    break;
+                case "Cash":
+                    break;
+                case "Mobile Wallet":
+                    break;
+            }
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
 
     }
 }
