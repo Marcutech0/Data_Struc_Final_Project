@@ -15,6 +15,8 @@ namespace POS_FO
     public partial class Cashier : Form
     {
         private Discount? discount;
+        private MySqlConnection connection;
+        private const string ConnectionString = "Server=localhost;Port=3306;Database=pos;Uid=root;Password=";
 
         public void cashPayment()
         {
@@ -249,9 +251,38 @@ namespace POS_FO
 
         }
 
+        /*do this tmr
+         * make new button for after inputting the numbers auto search
+         * constructor for the button click event
+         * i cant see anything :-(
+         */
+        private void findproduact(string productId)
+        {
+            string query = "SELECT * FROM products WHERE productID = @productId";
+            using (MySqlConnection connection = new MySqlConnection(ConnectionString))
+            {
+                MySqlCommand command = new MySqlCommand(query, connection);
+                command.Parameters.AddWithValue("@productId", productId);
+                connection.Open();
+                MySqlDataReader reader = command.ExecuteReader();
+
+                if (reader.HasRows)
+                {
+                    reader.Read();
+                    string productName = reader.GetString(1);
+                    string productPrice = reader.GetString(2);
+                    MessageBox.Show( productId + productName + productPrice);
+                }
+                else
+                {
+                    MessageBox.Show("Pee");
+                }
+                reader.Close();
+            }
+        }
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+           //grafewjfoia
         }
 
 
