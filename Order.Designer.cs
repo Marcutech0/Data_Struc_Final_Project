@@ -29,7 +29,11 @@
         private void InitializeComponent()
         {
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             dataGridView1 = new DataGridView();
+            productName = new DataGridViewTextBoxColumn();
+            quantity = new DataGridViewTextBoxColumn();
+            price = new DataGridViewTextBoxColumn();
             button7 = new Button();
             panel10 = new Panel();
             button11 = new Button();
@@ -48,14 +52,11 @@
             button1 = new Button();
             button12 = new Button();
             panel1 = new Panel();
-            button15 = new Button();
-            button16 = new Button();
-            button17 = new Button();
-            button18 = new Button();
             button19 = new Button();
-            productName = new DataGridViewTextBoxColumn();
-            quantity = new DataGridViewTextBoxColumn();
-            price = new DataGridViewTextBoxColumn();
+            button18 = new Button();
+            button17 = new Button();
+            button16 = new Button();
+            button15 = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             panel10.SuspendLayout();
             panel1.SuspendLayout();
@@ -70,18 +71,42 @@
             dataGridViewCellStyle1.BackColor = Color.FromArgb(169, 175, 126);
             dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             dataGridViewCellStyle1.ForeColor = Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionBackColor = Color.Transparent;
             dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
             dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { productName, quantity, price });
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = SystemColors.Window;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = Color.Transparent;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             dataGridView1.EnableHeadersVisualStyles = false;
             dataGridView1.Location = new Point(12, 12);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowTemplate.Height = 25;
             dataGridView1.Size = new Size(664, 705);
             dataGridView1.TabIndex = 0;
+            // 
+            // productName
+            // 
+            productName.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            productName.HeaderText = "Product Name";
+            productName.Name = "productName";
+            // 
+            // quantity
+            // 
+            quantity.HeaderText = "Quantity";
+            quantity.Name = "quantity";
+            // 
+            // price
+            // 
+            price.HeaderText = "Price";
+            price.Name = "price";
             // 
             // button7
             // 
@@ -338,47 +363,19 @@
             panel1.Size = new Size(376, 282);
             panel1.TabIndex = 16;
             // 
-            // button15
+            // button19
             // 
-            button15.BackColor = Color.FromArgb(125, 143, 105);
-            button15.FlatAppearance.BorderSize = 0;
-            button15.FlatStyle = FlatStyle.Flat;
-            button15.Font = new Font("Nirmala UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            button15.ForeColor = Color.White;
-            button15.Location = new Point(198, 17);
-            button15.Name = "button15";
-            button15.Size = new Size(157, 66);
-            button15.TabIndex = 16;
-            button15.Text = "Meal";
-            button15.UseVisualStyleBackColor = false;
-            // 
-            // button16
-            // 
-            button16.BackColor = Color.FromArgb(125, 143, 105);
-            button16.FlatAppearance.BorderSize = 0;
-            button16.FlatStyle = FlatStyle.Flat;
-            button16.Font = new Font("Nirmala UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            button16.ForeColor = Color.White;
-            button16.Location = new Point(26, 107);
-            button16.Name = "button16";
-            button16.Size = new Size(157, 66);
-            button16.TabIndex = 17;
-            button16.Text = "Drink";
-            button16.UseVisualStyleBackColor = false;
-            // 
-            // button17
-            // 
-            button17.BackColor = Color.FromArgb(125, 143, 105);
-            button17.FlatAppearance.BorderSize = 0;
-            button17.FlatStyle = FlatStyle.Flat;
-            button17.Font = new Font("Nirmala UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            button17.ForeColor = Color.White;
-            button17.Location = new Point(26, 200);
-            button17.Name = "button17";
-            button17.Size = new Size(157, 66);
-            button17.TabIndex = 18;
-            button17.Text = "Fruit";
-            button17.UseVisualStyleBackColor = false;
+            button19.BackColor = Color.FromArgb(125, 143, 105);
+            button19.FlatAppearance.BorderSize = 0;
+            button19.FlatStyle = FlatStyle.Flat;
+            button19.Font = new Font("Nirmala UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button19.ForeColor = Color.White;
+            button19.Location = new Point(198, 200);
+            button19.Name = "button19";
+            button19.Size = new Size(157, 66);
+            button19.TabIndex = 20;
+            button19.Text = "Vegetable";
+            button19.UseVisualStyleBackColor = false;
             // 
             // button18
             // 
@@ -394,35 +391,47 @@
             button18.Text = "Snack";
             button18.UseVisualStyleBackColor = false;
             // 
-            // button19
+            // button17
             // 
-            button19.BackColor = Color.FromArgb(125, 143, 105);
-            button19.FlatAppearance.BorderSize = 0;
-            button19.FlatStyle = FlatStyle.Flat;
-            button19.Font = new Font("Nirmala UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            button19.ForeColor = Color.White;
-            button19.Location = new Point(198, 200);
-            button19.Name = "button19";
-            button19.Size = new Size(157, 66);
-            button19.TabIndex = 20;
-            button19.Text = "Vegetable";
-            button19.UseVisualStyleBackColor = false;
+            button17.BackColor = Color.FromArgb(125, 143, 105);
+            button17.FlatAppearance.BorderSize = 0;
+            button17.FlatStyle = FlatStyle.Flat;
+            button17.Font = new Font("Nirmala UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button17.ForeColor = Color.White;
+            button17.Location = new Point(26, 200);
+            button17.Name = "button17";
+            button17.Size = new Size(157, 66);
+            button17.TabIndex = 18;
+            button17.Text = "Fruit";
+            button17.UseVisualStyleBackColor = false;
             // 
-            // productName
+            // button16
             // 
-            productName.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            productName.HeaderText = "Product Name";
-            productName.Name = "productName";
+            button16.BackColor = Color.FromArgb(125, 143, 105);
+            button16.FlatAppearance.BorderSize = 0;
+            button16.FlatStyle = FlatStyle.Flat;
+            button16.Font = new Font("Nirmala UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button16.ForeColor = Color.White;
+            button16.Location = new Point(26, 107);
+            button16.Name = "button16";
+            button16.Size = new Size(157, 66);
+            button16.TabIndex = 17;
+            button16.Text = "Drink";
+            button16.UseVisualStyleBackColor = false;
             // 
-            // quantity
+            // button15
             // 
-            quantity.HeaderText = "Quantity";
-            quantity.Name = "quantity";
-            // 
-            // price
-            // 
-            price.HeaderText = "Price";
-            price.Name = "price";
+            button15.BackColor = Color.FromArgb(125, 143, 105);
+            button15.FlatAppearance.BorderSize = 0;
+            button15.FlatStyle = FlatStyle.Flat;
+            button15.Font = new Font("Nirmala UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button15.ForeColor = Color.White;
+            button15.Location = new Point(198, 17);
+            button15.Name = "button15";
+            button15.Size = new Size(157, 66);
+            button15.TabIndex = 16;
+            button15.Text = "Meal";
+            button15.UseVisualStyleBackColor = false;
             // 
             // Order
             // 
