@@ -220,12 +220,12 @@ namespace POS_FO
             discount.FormClosed += Discount_FormClosed;
             discount.Show();
 
-            discountButton.Enabled = false;  // Disable the button when the form is shown
+            discountButton.Enabled = false;
         }
 
         private void Discount_FormClosed(object? sender, FormClosedEventArgs e)
         {
-            discountButton.Enabled = true;  // Enable the button when the form is closed
+            discountButton.Enabled = true;
         }
 
         private void Cashier_Load_1(object sender, EventArgs e)
@@ -254,6 +254,10 @@ namespace POS_FO
 
         }
 
-
+        private void button12_Click(object sender, EventArgs e)
+        {
+            Order order = new Order();
+            order.Show();
+        }
     }
 }
