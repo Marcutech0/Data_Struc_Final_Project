@@ -29,9 +29,10 @@
         private void InitializeComponent()
         {
             ucPanel = new Panel();
-            paymentButton = new Button();
             panel10 = new Panel();
+            label8 = new Label();
             button14 = new Button();
+            comboBox1 = new ComboBox();
             button13 = new Button();
             label2 = new Label();
             button11 = new Button();
@@ -46,18 +47,31 @@
             button2 = new Button();
             button1 = new Button();
             stocksButton = new Button();
+<<<<<<< HEAD
             couponButton = new Button();
             salesLogButton = new Button();
             helpButton = new Button();
             Exit = new Button();
+=======
+            discountButton = new Button();
+            salesLogButton = new Button();
+            helpButton = new Button();
+            exitButton = new Button();
+>>>>>>> master
             addItemButton = new Button();
             panel3 = new Panel();
+            label13 = new Label();
+            label12 = new Label();
+            label11 = new Label();
+            label10 = new Label();
+            label9 = new Label();
             label6 = new Label();
             label5 = new Label();
             label4 = new Label();
             label3 = new Label();
             label1 = new Label();
             label7 = new Label();
+            button12 = new Button();
             panel10.SuspendLayout();
             panel3.SuspendLayout();
             SuspendLayout();
@@ -70,25 +84,12 @@
             ucPanel.Size = new Size(569, 628);
             ucPanel.TabIndex = 1;
             // 
-            // paymentButton
-            // 
-            paymentButton.BackColor = Color.FromArgb(169, 175, 126);
-            paymentButton.FlatAppearance.BorderSize = 0;
-            paymentButton.FlatStyle = FlatStyle.Flat;
-            paymentButton.Font = new Font("Nirmala UI", 15F, FontStyle.Bold, GraphicsUnit.Point);
-            paymentButton.ForeColor = Color.White;
-            paymentButton.Location = new Point(587, 438);
-            paymentButton.Name = "paymentButton";
-            paymentButton.Size = new Size(109, 95);
-            paymentButton.TabIndex = 10;
-            paymentButton.Text = "Pay";
-            paymentButton.UseVisualStyleBackColor = false;
-            paymentButton.Click += paymentButton_Click_1;
-            // 
             // panel10
             // 
             panel10.BackColor = Color.FromArgb(169, 175, 126);
+            panel10.Controls.Add(label8);
             panel10.Controls.Add(button14);
+            panel10.Controls.Add(comboBox1);
             panel10.Controls.Add(button13);
             panel10.Controls.Add(label2);
             panel10.Controls.Add(button11);
@@ -107,6 +108,17 @@
             panel10.Size = new Size(376, 408);
             panel10.TabIndex = 4;
             // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("Nirmala UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            label8.ForeColor = Color.White;
+            label8.Location = new Point(10, 358);
+            label8.Name = "label8";
+            label8.Size = new Size(103, 15);
+            label8.TabIndex = 15;
+            label8.Text = "Payment Method";
+            // 
             // button14
             // 
             button14.BackColor = Color.FromArgb(125, 143, 105);
@@ -121,6 +133,16 @@
             button14.Text = "C";
             button14.UseVisualStyleBackColor = false;
             button14.Click += button14_Click;
+            // 
+            // comboBox1
+            // 
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Items.AddRange(new object[] { "Credit/Debit Card", "Cash", "Mobile Wallet" });
+            comboBox1.Location = new Point(130, 356);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(112, 23);
+            comboBox1.TabIndex = 14;
+            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
             // button13
             // 
@@ -153,13 +175,13 @@
             button11.FlatStyle = FlatStyle.Flat;
             button11.Font = new Font("Nirmala UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             button11.ForeColor = Color.White;
-            button11.Location = new Point(26, 339);
+            button11.Location = new Point(257, 344);
             button11.Name = "button11";
-            button11.Size = new Size(329, 53);
+            button11.Size = new Size(98, 38);
             button11.TabIndex = 9;
-            button11.Text = "Enter";
+            button11.Text = "Pay";
             button11.UseVisualStyleBackColor = false;
-            button11.Click += button11_Click;
+            button11.Click += button11_Click_1;
             // 
             // button10
             // 
@@ -318,38 +340,47 @@
             stocksButton.FlatStyle = FlatStyle.Flat;
             stocksButton.Font = new Font("Nirmala UI", 15F, FontStyle.Bold, GraphicsUnit.Point);
             stocksButton.ForeColor = Color.White;
-            stocksButton.Location = new Point(587, 79);
+            stocksButton.Location = new Point(587, 12);
             stocksButton.Name = "stocksButton";
-            stocksButton.Size = new Size(109, 92);
+            stocksButton.Size = new Size(109, 91);
             stocksButton.TabIndex = 0;
             stocksButton.Text = "Stocks";
             stocksButton.UseVisualStyleBackColor = false;
             stocksButton.Click += categoriesButton_Click_1;
             // 
-            // couponButton
+            // discountButton
             // 
-            couponButton.BackColor = Color.FromArgb(169, 175, 126);
-            couponButton.FlatAppearance.BorderSize = 0;
-            couponButton.FlatStyle = FlatStyle.Flat;
-            couponButton.Font = new Font("Nirmala UI", 15F, FontStyle.Bold, GraphicsUnit.Point);
-            couponButton.ForeColor = Color.White;
-            couponButton.Location = new Point(587, 351);
-            couponButton.Name = "couponButton";
-            couponButton.Size = new Size(109, 81);
-            couponButton.TabIndex = 5;
-            couponButton.Text = "Apply Discount";
-            couponButton.UseVisualStyleBackColor = false;
+            discountButton.BackColor = Color.FromArgb(169, 175, 126);
+            discountButton.FlatAppearance.BorderSize = 0;
+            discountButton.FlatStyle = FlatStyle.Flat;
+            discountButton.Font = new Font("Nirmala UI", 14F, FontStyle.Bold, GraphicsUnit.Point);
+            discountButton.ForeColor = Color.White;
+            discountButton.Location = new Point(587, 305);
+            discountButton.Name = "discountButton";
+            discountButton.Size = new Size(109, 96);
+            discountButton.TabIndex = 5;
+            discountButton.Text = "Apply Discount";
+            discountButton.UseVisualStyleBackColor = false;
+            discountButton.Click += discountButton_Click_1;
             // 
             // salesLogButton
             // 
             salesLogButton.BackColor = Color.FromArgb(169, 175, 126);
             salesLogButton.FlatAppearance.BorderSize = 0;
             salesLogButton.FlatStyle = FlatStyle.Flat;
+<<<<<<< HEAD
             salesLogButton.Font = new Font("Nirmala UI", 15F, FontStyle.Bold, GraphicsUnit.Point);
             salesLogButton.ForeColor = Color.White;
             salesLogButton.Location = new Point(587, 177);
             salesLogButton.Name = "salesLogButton";
             salesLogButton.Size = new Size(109, 81);
+=======
+            salesLogButton.Font = new Font("Nirmala UI", 14F, FontStyle.Bold, GraphicsUnit.Point);
+            salesLogButton.ForeColor = Color.White;
+            salesLogButton.Location = new Point(587, 109);
+            salesLogButton.Name = "salesLogButton";
+            salesLogButton.Size = new Size(109, 88);
+>>>>>>> master
             salesLogButton.TabIndex = 6;
             salesLogButton.Text = "Sales log";
             salesLogButton.UseVisualStyleBackColor = false;
@@ -362,13 +393,14 @@
             helpButton.FlatStyle = FlatStyle.Flat;
             helpButton.Font = new Font("Nirmala UI", 15F, FontStyle.Bold, GraphicsUnit.Point);
             helpButton.ForeColor = Color.White;
-            helpButton.Location = new Point(587, 626);
+            helpButton.Location = new Point(587, 611);
             helpButton.Name = "helpButton";
-            helpButton.Size = new Size(109, 81);
+            helpButton.Size = new Size(109, 96);
             helpButton.TabIndex = 7;
             helpButton.Text = "Help";
             helpButton.UseVisualStyleBackColor = false;
             // 
+<<<<<<< HEAD
             // Exit
             // 
             Exit.BackColor = Color.FromArgb(169, 175, 126);
@@ -383,6 +415,21 @@
             Exit.Text = "Exit";
             Exit.UseVisualStyleBackColor = false;
             Exit.Click += salesLogButton_Click_1;
+=======
+            // exitButton
+            // 
+            exitButton.BackColor = Color.FromArgb(169, 175, 126);
+            exitButton.FlatAppearance.BorderSize = 0;
+            exitButton.FlatStyle = FlatStyle.Flat;
+            exitButton.Font = new Font("Nirmala UI", 15F, FontStyle.Bold, GraphicsUnit.Point);
+            exitButton.ForeColor = Color.White;
+            exitButton.Location = new Point(587, 509);
+            exitButton.Name = "exitButton";
+            exitButton.Size = new Size(109, 96);
+            exitButton.TabIndex = 8;
+            exitButton.Text = "Exit";
+            exitButton.UseVisualStyleBackColor = false;
+>>>>>>> master
             // 
             // addItemButton
             // 
@@ -391,9 +438,9 @@
             addItemButton.FlatStyle = FlatStyle.Flat;
             addItemButton.Font = new Font("Nirmala UI", 15F, FontStyle.Bold, GraphicsUnit.Point);
             addItemButton.ForeColor = Color.White;
-            addItemButton.Location = new Point(587, 264);
+            addItemButton.Location = new Point(587, 203);
             addItemButton.Name = "addItemButton";
-            addItemButton.Size = new Size(109, 81);
+            addItemButton.Size = new Size(109, 96);
             addItemButton.TabIndex = 9;
             addItemButton.Text = "Add Item";
             addItemButton.UseVisualStyleBackColor = false;
@@ -402,6 +449,11 @@
             // panel3
             // 
             panel3.BackColor = Color.FromArgb(169, 175, 126);
+            panel3.Controls.Add(label13);
+            panel3.Controls.Add(label12);
+            panel3.Controls.Add(label11);
+            panel3.Controls.Add(label10);
+            panel3.Controls.Add(label9);
             panel3.Controls.Add(label6);
             panel3.Controls.Add(label5);
             panel3.Controls.Add(label4);
@@ -411,6 +463,51 @@
             panel3.Name = "panel3";
             panel3.Size = new Size(376, 281);
             panel3.TabIndex = 2;
+            // 
+            // label13
+            // 
+            label13.AutoSize = true;
+            label13.Location = new Point(311, 235);
+            label13.Name = "label13";
+            label13.Size = new Size(44, 15);
+            label13.TabIndex = 9;
+            label13.Text = "label13";
+            // 
+            // label12
+            // 
+            label12.AutoSize = true;
+            label12.Location = new Point(311, 176);
+            label12.Name = "label12";
+            label12.Size = new Size(44, 15);
+            label12.TabIndex = 8;
+            label12.Text = "label12";
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Location = new Point(311, 109);
+            label11.Name = "label11";
+            label11.Size = new Size(44, 15);
+            label11.TabIndex = 7;
+            label11.Text = "label11";
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Location = new Point(311, 75);
+            label10.Name = "label10";
+            label10.Size = new Size(44, 15);
+            label10.TabIndex = 6;
+            label10.Text = "label10";
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Location = new Point(311, 35);
+            label9.Name = "label9";
+            label9.Size = new Size(38, 15);
+            label9.TabIndex = 5;
+            label9.Text = "label9";
             // 
             // label6
             // 
@@ -479,25 +576,46 @@
             label7.TabIndex = 11;
             label7.Text = "store name";
             // 
+            // button12
+            // 
+            button12.BackColor = Color.FromArgb(169, 175, 126);
+            button12.FlatAppearance.BorderSize = 0;
+            button12.FlatStyle = FlatStyle.Flat;
+            button12.Font = new Font("Nirmala UI", 14F, FontStyle.Bold, GraphicsUnit.Point);
+            button12.ForeColor = Color.White;
+            button12.Location = new Point(587, 407);
+            button12.Name = "button12";
+            button12.Size = new Size(109, 96);
+            button12.TabIndex = 12;
+            button12.Text = "Order";
+            button12.UseVisualStyleBackColor = false;
+            button12.Click += button12_Click;
+            // 
             // Cashier
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(125, 143, 105);
             ClientSize = new Size(1090, 729);
+            Controls.Add(button12);
             Controls.Add(label7);
             Controls.Add(panel3);
             Controls.Add(helpButton);
             Controls.Add(addItemButton);
+<<<<<<< HEAD
             Controls.Add(paymentButton);
             Controls.Add(Exit);
+=======
+            Controls.Add(exitButton);
+>>>>>>> master
             Controls.Add(panel10);
             Controls.Add(ucPanel);
-            Controls.Add(couponButton);
+            Controls.Add(discountButton);
             Controls.Add(stocksButton);
             Controls.Add(salesLogButton);
             Name = "Cashier";
             Text = "Cashier";
+            Load += Cashier_Load_1;
             panel10.ResumeLayout(false);
             panel10.PerformLayout();
             panel3.ResumeLayout(false);
@@ -521,18 +639,23 @@
         private Button button1;
         private Button button11;
         private Button stocksButton;
+<<<<<<< HEAD
         private Button couponButton;
         private Button salesLogButton;
         private Button helpButton;
         private Button Exit;
+=======
+        private Button discountButton;
+        private Button salesLogButton;
+        private Button helpButton;
+        private Button exitButton;
+>>>>>>> master
         private Button addItemButton;
-        private Button paymentButton;
         private UserControls.Stocks categories1;
         private UserControls.Coupon coupon1;
         private UserControls.SalesLog salesLog1;
         private UserControls.AddItems addItems1;
         private UserControls.HelpPage helpPage1;
-        private UserControls.PaymentPage paymentPage1;
         private Label label2;
         private Button button13;
         private Button button14;
@@ -543,5 +666,13 @@
         private Label label3;
         private Label label1;
         private Label label7;
+        private Label label8;
+        private ComboBox comboBox1;
+        private Label label11;
+        private Label label10;
+        private Label label9;
+        private Label label13;
+        private Label label12;
+        private Button button12;
     }
 }

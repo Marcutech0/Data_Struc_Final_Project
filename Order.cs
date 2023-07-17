@@ -8,16 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace POS_FO.UserControls
+namespace POS_FO
 {
-    public partial class SalesLog : UserControl
+    public partial class Order : Form
     {
-        public SalesLog()
+        public Order()
         {
             InitializeComponent();
         }
 
-        private void SalesLog_Load(object sender, EventArgs e)
+        private void Order_Load(object sender, EventArgs e)
         {
 
         }

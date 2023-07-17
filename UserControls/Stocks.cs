@@ -71,5 +71,10 @@ namespace POS_FO.UserControls
                 dataGridView1.Rows.Clear();
             }
         }
+
+        private void Stocks_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

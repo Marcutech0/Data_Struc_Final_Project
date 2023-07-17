@@ -26,15 +26,6 @@ namespace POS_FO
         {
             string xamppControlPath = GetXamppControlPath();
 
-            // Check if XAMPP Control Panel is already running
-            Process[] runningProcesses = Process.GetProcessesByName("xampp-control");
-            if (runningProcesses.Length > 0)
-            {
-                // XAMPP Control Panel is already running, no need to start it again
-                return;
-            }
-
-            // Start the XAMPP Control Panel
             Process process = new Process();
             process.StartInfo.FileName = xamppControlPath;
             process.StartInfo.Arguments = "start mysql";
@@ -75,7 +66,7 @@ namespace POS_FO
 
         private void EmployeeKey_Load(object sender, EventArgs e)
         {
-          
+
         }
 
         private void EKEnter_Click(object sender, EventArgs e)
@@ -125,11 +116,16 @@ namespace POS_FO
 
         private void SUButton_Click(object sender, EventArgs e)
         {
-            
+
 
             Signup signup = new Signup();
             signup.Show();
             this.Hide();
+        }
+
+        private void userTxt_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
