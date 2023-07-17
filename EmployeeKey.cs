@@ -24,12 +24,12 @@ namespace POS_FO
 
         public static void StartMySQLServer()
         {
-        string xamppControlPath = GetXamppControlPath();
+            string xamppControlPath = GetXamppControlPath();
 
-        Process process = new Process();
-        process.StartInfo.FileName = xamppControlPath;
-        process.StartInfo.Arguments = "start mysql";
-        process.Start();
+            Process process = new Process();
+            process.StartInfo.FileName = xamppControlPath;
+            process.StartInfo.Arguments = "start mysql";
+            process.Start();
         }
         public EmployeeKey()
         {
@@ -66,7 +66,7 @@ namespace POS_FO
 
         private void EmployeeKey_Load(object sender, EventArgs e)
         {
-          
+
         }
 
         private void EKEnter_Click(object sender, EventArgs e)
@@ -116,11 +116,16 @@ namespace POS_FO
 
         private void SUButton_Click(object sender, EventArgs e)
         {
-            
+
 
             Signup signup = new Signup();
             signup.Show();
             this.Hide();
+        }
+
+        private void userTxt_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

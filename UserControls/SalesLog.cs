@@ -16,5 +16,10 @@ namespace POS_FO.UserControls
         {
             InitializeComponent();
         }
+
+        private void SalesLog_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

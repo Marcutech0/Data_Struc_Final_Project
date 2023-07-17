@@ -14,6 +14,28 @@ namespace POS_FO
 {
     public partial class Cashier : Form
     {
+        private Discount? discount;
+
+        public void cashPayment()
+        {
+            double subTotalAmount, totalAmount, change;
+            double tax = 0.2;
+
+            double paymentValue = double.Parse(label2.Text);
+
+            // totalAmount = subTotalAmount + (tax * subTotalAmount);
+            // change = paymentValue - totalAmount;
+        }
+
+        public void cardPayment()
+        {
+
+        }
+
+        public void mobilewalletPayment()
+        {
+
+        }
         public Cashier()
         {
             InitializeComponent();
@@ -31,7 +53,6 @@ namespace POS_FO
             helpPage1.Visible = false;
             salesLog1.Visible = false;
             addItems1.Visible = false;
-            paymentPage1.Visible = false;
         }
 
         private void categoriesButton_Click(object sender, EventArgs e)
@@ -46,7 +67,6 @@ namespace POS_FO
             helpPage1.Visible = false;
             salesLog1.Visible = false;
             addItems1.Visible = false;
-            paymentPage1.Visible = false;
         }
 
         private void salesLogButton_Click(object sender, EventArgs e)
@@ -56,7 +76,6 @@ namespace POS_FO
             helpPage1.Visible = false;
             salesLog1.Visible = true;
             addItems1.Visible = false;
-            paymentPage1.Visible = false;
         }
 
         private void addItemButton_Click(object sender, EventArgs e)
@@ -70,7 +89,6 @@ namespace POS_FO
             helpPage1.Visible = true;
             salesLog1.Visible = false;
             addItems1.Visible = false;
-            paymentPage1.Visible = false;
         }
 
 
@@ -159,7 +177,8 @@ namespace POS_FO
 
         private void salesLogButton2_Click(object sender, EventArgs e)
         {
-
+            SalesLog salesLog = new SalesLog();
+            addUserControl(salesLog);
         }
 
         private void addItemButton_Click_1(object sender, EventArgs e)
@@ -189,11 +208,56 @@ namespace POS_FO
         {
         }
 
-        private void paymentButton_Click_1(object sender, EventArgs e)
-        {
-            PaymentPage payment = new PaymentPage();
-            addUserControl(payment);
 
+        private void button11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void discountButton_Click_1(object sender, EventArgs e)
+        {
+            discount = new Discount();
+            discount.FormClosed += Discount_FormClosed;
+            discount.Show();
+
+            discountButton.Enabled = false;
+        }
+
+        private void Discount_FormClosed(object? sender, FormClosedEventArgs e)
+        {
+            discountButton.Enabled = true;
+        }
+
+        private void Cashier_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button11_Click_1(object sender, EventArgs e)
+        {
+            string comboBoxOption = comboBox1.SelectedItem.ToString();
+
+            switch (comboBoxOption)
+            {
+                case "Credit/Debit Card":
+                    break;
+                case "Cash":
+                    break;
+                case "Mobile Wallet":
+                    break;
+            }
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            Order order = new Order();
+            order.Show();
         }
     }
 }

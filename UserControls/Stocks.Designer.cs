@@ -61,17 +61,18 @@
             dataGridViewCellStyle1.BackColor = Color.FromArgb(125, 143, 105);
             dataGridViewCellStyle1.Font = new Font("Nirmala UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             dataGridViewCellStyle1.ForeColor = Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionBackColor = Color.Transparent;
             dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
             dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.ColumnHeadersHeight = 30;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { name, category, quantity, price });
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = Color.White;
             dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             dataGridViewCellStyle2.ForeColor = Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionBackColor = Color.Transparent;
             dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
             dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
@@ -81,6 +82,7 @@
             dataGridView1.RowTemplate.Height = 25;
             dataGridView1.Size = new Size(569, 575);
             dataGridView1.TabIndex = 11;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // name
             // 
@@ -132,6 +134,7 @@
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(235, 23);
             textBox1.TabIndex = 14;
+            textBox1.TextChanged += textBox1_TextChanged;
             // 
             // Stocks
             // 
@@ -145,6 +148,7 @@
             Controls.Add(comboBox1);
             Name = "Stocks";
             Size = new Size(569, 628);
+            Load += Stocks_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
