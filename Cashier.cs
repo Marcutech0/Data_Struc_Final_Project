@@ -215,16 +215,6 @@ namespace POS_FO
 
         }
 
-<<<<<<< HEAD
-        private void salesLogButton_Click_1(object sender, EventArgs e)
-        {
-            DialogResult result = MessageBox.Show("Are you sure you want to exit the program?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-            if (result == DialogResult.Yes)
-            {
-                System.Windows.Forms.Application.Exit();
-            }
-=======
         private void discountButton_Click_1(object sender, EventArgs e)
         {
             discount = new Discount();
@@ -269,7 +259,16 @@ namespace POS_FO
         {
             Order order = new Order();
             order.Show();
->>>>>>> master
+        }
+
+        private void salesLogButton_Click_1(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Are you sure you want to exit the program?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                System.Windows.Forms.Application.Exit();
+            }
         }
     }
 }
