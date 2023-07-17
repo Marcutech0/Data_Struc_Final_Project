@@ -28,7 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             ucPanel = new Panel();
+            selectedItemsGridView = new DataGridView();
+            productName = new DataGridViewTextBoxColumn();
+            quantity = new DataGridViewTextBoxColumn();
+            price = new DataGridViewTextBoxColumn();
             panel10 = new Panel();
             label8 = new Label();
             button14 = new Button();
@@ -65,6 +71,8 @@
             label1 = new Label();
             label7 = new Label();
             button12 = new Button();
+            ucPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)selectedItemsGridView).BeginInit();
             panel10.SuspendLayout();
             panel3.SuspendLayout();
             SuspendLayout();
@@ -72,10 +80,57 @@
             // ucPanel
             // 
             ucPanel.BackColor = Color.FromArgb(169, 175, 126);
+            ucPanel.Controls.Add(selectedItemsGridView);
             ucPanel.Location = new Point(12, 79);
             ucPanel.Name = "ucPanel";
             ucPanel.Size = new Size(569, 628);
             ucPanel.TabIndex = 1;
+            // 
+            // selectedItemsGridView
+            // 
+            selectedItemsGridView.BackgroundColor = Color.White;
+            selectedItemsGridView.BorderStyle = BorderStyle.None;
+            selectedItemsGridView.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(169, 175, 126);
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = Color.Transparent;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            selectedItemsGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            selectedItemsGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            selectedItemsGridView.Columns.AddRange(new DataGridViewColumn[] { productName, quantity, price });
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = SystemColors.Window;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = Color.Transparent;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            selectedItemsGridView.DefaultCellStyle = dataGridViewCellStyle2;
+            selectedItemsGridView.EnableHeadersVisualStyles = false;
+            selectedItemsGridView.Location = new Point(0, 0);
+            selectedItemsGridView.Name = "selectedItemsGridView";
+            selectedItemsGridView.RowTemplate.Height = 25;
+            selectedItemsGridView.Size = new Size(569, 628);
+            selectedItemsGridView.TabIndex = 13;
+            // 
+            // productName
+            // 
+            productName.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            productName.HeaderText = "Product Name";
+            productName.Name = "productName";
+            // 
+            // quantity
+            // 
+            quantity.HeaderText = "Quantity";
+            quantity.Name = "quantity";
+            // 
+            // price
+            // 
+            price.HeaderText = "Price";
+            price.Name = "price";
             // 
             // panel10
             // 
@@ -579,6 +634,8 @@
             Name = "Cashier";
             Text = "Cashier";
             Load += Cashier_Load_1;
+            ucPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)selectedItemsGridView).EndInit();
             panel10.ResumeLayout(false);
             panel10.PerformLayout();
             panel3.ResumeLayout(false);
@@ -630,5 +687,9 @@
         private Label label13;
         private Label label12;
         private Button button12;
+        private DataGridView selectedItemsGridView;
+        private DataGridViewTextBoxColumn productName;
+        private DataGridViewTextBoxColumn quantity;
+        private DataGridViewTextBoxColumn price;
     }
 }

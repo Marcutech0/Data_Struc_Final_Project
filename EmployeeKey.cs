@@ -26,6 +26,15 @@ namespace POS_FO
         {
             string xamppControlPath = GetXamppControlPath();
 
+            // Check if XAMPP Control Panel is already running
+            Process[] runningProcesses = Process.GetProcessesByName("xampp-control");
+            if (runningProcesses.Length > 0)
+            {
+                // XAMPP Control Panel is already running, no need to start it again
+                return;
+            }
+
+            // Start the XAMPP Control Panel
             Process process = new Process();
             process.StartInfo.FileName = xamppControlPath;
             process.StartInfo.Arguments = "start mysql";

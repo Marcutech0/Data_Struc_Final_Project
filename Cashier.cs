@@ -9,13 +9,45 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using POS_FO.UserControls;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace POS_FO
 {
     public partial class Cashier : Form
     {
         private Discount? discount;
+        private MySqlConnection connection;
+        private const string ConnectionString = "Server=localhost;Port=3306;Database=pos;Uid=root;Password=";
 
+        public void AddItemToCart(string productName, string productQuantity, string productPrice)
+        {
+            string selectQuery = "SELECT * FROM products WHERE productName = @productName";
+            using (MySqlCommand command = new MySqlCommand(selectQuery, connection))
+            {
+                command.Parameters.AddWithValue("@productName", productName);
+
+                using (MySqlDataReader reader = command.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        string retrievedProductName = reader.GetString("productName");
+                        string retrievedProductQuantity = reader.GetString("quantity");
+                        string retrievedProductPrice = reader.GetString("price");
+
+                        // Add the retrieved product details to the DataGridView in the "Cashier" form
+                        selectedItemsGridView.Rows.Add(retrievedProductName, retrievedProductQuantity, retrievedProductPrice);
+                    }
+                }
+            }
+        }
+        public void UpdateSelectedItems(string productName, string productQuantity, string productPrice)
+        {
+            selectedItemsGridView.Rows.Add(productName, productQuantity, productPrice);
+        }
+        public void AddSelectedItems(string productName, string productQuantity, string productPrice)
+        {
+            selectedItemsGridView.Rows.Add(productName, productQuantity, productPrice);
+        }
         public void cashPayment()
         {
             double subTotalAmount, totalAmount, change;
@@ -258,6 +290,21 @@ namespace POS_FO
         {
             Order order = new Order();
             order.Show();
+        }
+
+        private void salesLogButton_Click_1(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Are you sure you want to exit the program?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                System.Windows.Forms.Application.Exit();
+            }
+        }
+
+        private void selectedItemsGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
