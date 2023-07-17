@@ -158,6 +158,7 @@
             button11.TabIndex = 14;
             button11.Text = "Add Item";
             button11.UseVisualStyleBackColor = false;
+            button11.Click += button11_Click;
             // 
             // button14
             // 

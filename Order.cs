@@ -89,5 +89,28 @@ namespace POS_FO
         {
             FilterAndDisplayProducts("Vegetable");
         }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
+
+                // Get the values from the selected row
+                string productName = selectedRow.Cells["productName"].Value.ToString();
+                
+                string productQuantity = selectedRow.Cells["quantity"].Value.ToString();
+                string productPrice = selectedRow.Cells["price"].Value.ToString();
+
+                // Access the "Cashier" form and add the selected item
+                Cashier cashierForm = Application.OpenForms.OfType<Cashier>().FirstOrDefault();
+                cashierForm?.AddSelectedItems(productName, productQuantity, productPrice);
+            }
+            else
+            {
+                MessageBox.Show("Please select a row in the DataGridView.");
+            }
+
+        }
     }
 }
