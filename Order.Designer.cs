@@ -348,6 +348,7 @@
             button12.TabIndex = 15;
             button12.Text = "Dairy";
             button12.UseVisualStyleBackColor = false;
+            button12.Click += button12_Click;
             // 
             // panel1
             // 
@@ -376,6 +377,7 @@
             button19.TabIndex = 20;
             button19.Text = "Vegetable";
             button19.UseVisualStyleBackColor = false;
+            button19.Click += button19_Click;
             // 
             // button18
             // 
@@ -390,6 +392,7 @@
             button18.TabIndex = 19;
             button18.Text = "Snack";
             button18.UseVisualStyleBackColor = false;
+            button18.Click += button18_Click;
             // 
             // button17
             // 
@@ -404,6 +407,7 @@
             button17.TabIndex = 18;
             button17.Text = "Fruit";
             button17.UseVisualStyleBackColor = false;
+            button17.Click += button17_Click;
             // 
             // button16
             // 
@@ -418,6 +422,7 @@
             button16.TabIndex = 17;
             button16.Text = "Drink";
             button16.UseVisualStyleBackColor = false;
+            button16.Click += button16_Click;
             // 
             // button15
             // 
@@ -432,6 +437,7 @@
             button15.TabIndex = 16;
             button15.Text = "Meal";
             button15.UseVisualStyleBackColor = false;
+            button15.Click += button15_Click;
             // 
             // Order
             // 
