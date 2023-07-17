@@ -47,17 +47,10 @@
             button2 = new Button();
             button1 = new Button();
             stocksButton = new Button();
-<<<<<<< HEAD
-            couponButton = new Button();
-            salesLogButton = new Button();
-            helpButton = new Button();
-            Exit = new Button();
-=======
             discountButton = new Button();
             salesLogButton = new Button();
             helpButton = new Button();
             exitButton = new Button();
->>>>>>> master
             addItemButton = new Button();
             panel3 = new Panel();
             label13 = new Label();
@@ -368,19 +361,11 @@
             salesLogButton.BackColor = Color.FromArgb(169, 175, 126);
             salesLogButton.FlatAppearance.BorderSize = 0;
             salesLogButton.FlatStyle = FlatStyle.Flat;
-<<<<<<< HEAD
-            salesLogButton.Font = new Font("Nirmala UI", 15F, FontStyle.Bold, GraphicsUnit.Point);
-            salesLogButton.ForeColor = Color.White;
-            salesLogButton.Location = new Point(587, 177);
-            salesLogButton.Name = "salesLogButton";
-            salesLogButton.Size = new Size(109, 81);
-=======
             salesLogButton.Font = new Font("Nirmala UI", 14F, FontStyle.Bold, GraphicsUnit.Point);
             salesLogButton.ForeColor = Color.White;
             salesLogButton.Location = new Point(587, 109);
             salesLogButton.Name = "salesLogButton";
             salesLogButton.Size = new Size(109, 88);
->>>>>>> master
             salesLogButton.TabIndex = 6;
             salesLogButton.Text = "Sales log";
             salesLogButton.UseVisualStyleBackColor = false;
@@ -400,22 +385,6 @@
             helpButton.Text = "Help";
             helpButton.UseVisualStyleBackColor = false;
             // 
-<<<<<<< HEAD
-            // Exit
-            // 
-            Exit.BackColor = Color.FromArgb(169, 175, 126);
-            Exit.FlatAppearance.BorderSize = 0;
-            Exit.FlatStyle = FlatStyle.Flat;
-            Exit.Font = new Font("Nirmala UI", 15F, FontStyle.Bold, GraphicsUnit.Point);
-            Exit.ForeColor = Color.White;
-            Exit.Location = new Point(587, 539);
-            Exit.Name = "Exit";
-            Exit.Size = new Size(109, 81);
-            Exit.TabIndex = 8;
-            Exit.Text = "Exit";
-            Exit.UseVisualStyleBackColor = false;
-            Exit.Click += salesLogButton_Click_1;
-=======
             // exitButton
             // 
             exitButton.BackColor = Color.FromArgb(169, 175, 126);
@@ -429,7 +398,6 @@
             exitButton.TabIndex = 8;
             exitButton.Text = "Exit";
             exitButton.UseVisualStyleBackColor = false;
->>>>>>> master
             // 
             // addItemButton
             // 
@@ -602,12 +570,7 @@
             Controls.Add(panel3);
             Controls.Add(helpButton);
             Controls.Add(addItemButton);
-<<<<<<< HEAD
-            Controls.Add(paymentButton);
-            Controls.Add(Exit);
-=======
             Controls.Add(exitButton);
->>>>>>> master
             Controls.Add(panel10);
             Controls.Add(ucPanel);
             Controls.Add(discountButton);
@@ -639,17 +602,10 @@
         private Button button1;
         private Button button11;
         private Button stocksButton;
-<<<<<<< HEAD
-        private Button couponButton;
-        private Button salesLogButton;
-        private Button helpButton;
-        private Button Exit;
-=======
         private Button discountButton;
         private Button salesLogButton;
         private Button helpButton;
         private Button exitButton;
->>>>>>> master
         private Button addItemButton;
         private UserControls.Stocks categories1;
         private UserControls.Coupon coupon1;
