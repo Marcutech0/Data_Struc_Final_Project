@@ -28,7 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             ucPanel = new Panel();
+            selectedItemsGridView = new DataGridView();
+            productName = new DataGridViewTextBoxColumn();
+            quantity = new DataGridViewTextBoxColumn();
+            price = new DataGridViewTextBoxColumn();
             panel10 = new Panel();
             label8 = new Label();
             button14 = new Button();
@@ -53,17 +59,20 @@
             exitButton = new Button();
             addItemButton = new Button();
             panel3 = new Panel();
+            label13 = new Label();
+            label12 = new Label();
+            label11 = new Label();
+            label10 = new Label();
+            label9 = new Label();
             label6 = new Label();
             label5 = new Label();
             label4 = new Label();
             label3 = new Label();
             label1 = new Label();
             label7 = new Label();
-            label9 = new Label();
-            label10 = new Label();
-            label11 = new Label();
-            label12 = new Label();
-            label13 = new Label();
+            button12 = new Button();
+            ucPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)selectedItemsGridView).BeginInit();
             panel10.SuspendLayout();
             panel3.SuspendLayout();
             SuspendLayout();
@@ -71,10 +80,57 @@
             // ucPanel
             // 
             ucPanel.BackColor = Color.FromArgb(169, 175, 126);
+            ucPanel.Controls.Add(selectedItemsGridView);
             ucPanel.Location = new Point(12, 79);
             ucPanel.Name = "ucPanel";
             ucPanel.Size = new Size(569, 628);
             ucPanel.TabIndex = 1;
+            // 
+            // selectedItemsGridView
+            // 
+            selectedItemsGridView.BackgroundColor = Color.White;
+            selectedItemsGridView.BorderStyle = BorderStyle.None;
+            selectedItemsGridView.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(169, 175, 126);
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = Color.Transparent;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            selectedItemsGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            selectedItemsGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            selectedItemsGridView.Columns.AddRange(new DataGridViewColumn[] { productName, quantity, price });
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = SystemColors.Window;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = Color.Transparent;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            selectedItemsGridView.DefaultCellStyle = dataGridViewCellStyle2;
+            selectedItemsGridView.EnableHeadersVisualStyles = false;
+            selectedItemsGridView.Location = new Point(0, 0);
+            selectedItemsGridView.Name = "selectedItemsGridView";
+            selectedItemsGridView.RowTemplate.Height = 25;
+            selectedItemsGridView.Size = new Size(569, 628);
+            selectedItemsGridView.TabIndex = 13;
+            // 
+            // productName
+            // 
+            productName.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            productName.HeaderText = "Product Name";
+            productName.Name = "productName";
+            // 
+            // quantity
+            // 
+            quantity.HeaderText = "Quantity";
+            quantity.Name = "quantity";
+            // 
+            // price
+            // 
+            price.HeaderText = "Price";
+            price.Name = "price";
             // 
             // panel10
             // 
@@ -334,7 +390,7 @@
             stocksButton.ForeColor = Color.White;
             stocksButton.Location = new Point(587, 12);
             stocksButton.Name = "stocksButton";
-            stocksButton.Size = new Size(109, 109);
+            stocksButton.Size = new Size(109, 91);
             stocksButton.TabIndex = 0;
             stocksButton.Text = "Stocks";
             stocksButton.UseVisualStyleBackColor = false;
@@ -347,9 +403,9 @@
             discountButton.FlatStyle = FlatStyle.Flat;
             discountButton.Font = new Font("Nirmala UI", 14F, FontStyle.Bold, GraphicsUnit.Point);
             discountButton.ForeColor = Color.White;
-            discountButton.Location = new Point(586, 356);
+            discountButton.Location = new Point(587, 305);
             discountButton.Name = "discountButton";
-            discountButton.Size = new Size(109, 109);
+            discountButton.Size = new Size(109, 96);
             discountButton.TabIndex = 5;
             discountButton.Text = "Apply Discount";
             discountButton.UseVisualStyleBackColor = false;
@@ -362,9 +418,9 @@
             salesLogButton.FlatStyle = FlatStyle.Flat;
             salesLogButton.Font = new Font("Nirmala UI", 14F, FontStyle.Bold, GraphicsUnit.Point);
             salesLogButton.ForeColor = Color.White;
-            salesLogButton.Location = new Point(587, 127);
+            salesLogButton.Location = new Point(587, 109);
             salesLogButton.Name = "salesLogButton";
-            salesLogButton.Size = new Size(109, 109);
+            salesLogButton.Size = new Size(109, 88);
             salesLogButton.TabIndex = 6;
             salesLogButton.Text = "Sales log";
             salesLogButton.UseVisualStyleBackColor = false;
@@ -377,9 +433,9 @@
             helpButton.FlatStyle = FlatStyle.Flat;
             helpButton.Font = new Font("Nirmala UI", 15F, FontStyle.Bold, GraphicsUnit.Point);
             helpButton.ForeColor = Color.White;
-            helpButton.Location = new Point(587, 586);
+            helpButton.Location = new Point(587, 611);
             helpButton.Name = "helpButton";
-            helpButton.Size = new Size(109, 121);
+            helpButton.Size = new Size(109, 96);
             helpButton.TabIndex = 7;
             helpButton.Text = "Help";
             helpButton.UseVisualStyleBackColor = false;
@@ -391,9 +447,9 @@
             exitButton.FlatStyle = FlatStyle.Flat;
             exitButton.Font = new Font("Nirmala UI", 15F, FontStyle.Bold, GraphicsUnit.Point);
             exitButton.ForeColor = Color.White;
-            exitButton.Location = new Point(586, 471);
+            exitButton.Location = new Point(587, 509);
             exitButton.Name = "exitButton";
-            exitButton.Size = new Size(109, 109);
+            exitButton.Size = new Size(109, 96);
             exitButton.TabIndex = 8;
             exitButton.Text = "Exit";
             exitButton.UseVisualStyleBackColor = false;
@@ -405,9 +461,9 @@
             addItemButton.FlatStyle = FlatStyle.Flat;
             addItemButton.Font = new Font("Nirmala UI", 15F, FontStyle.Bold, GraphicsUnit.Point);
             addItemButton.ForeColor = Color.White;
-            addItemButton.Location = new Point(587, 242);
+            addItemButton.Location = new Point(587, 203);
             addItemButton.Name = "addItemButton";
-            addItemButton.Size = new Size(109, 109);
+            addItemButton.Size = new Size(109, 96);
             addItemButton.TabIndex = 9;
             addItemButton.Text = "Add Item";
             addItemButton.UseVisualStyleBackColor = false;
@@ -430,6 +486,51 @@
             panel3.Name = "panel3";
             panel3.Size = new Size(376, 281);
             panel3.TabIndex = 2;
+            // 
+            // label13
+            // 
+            label13.AutoSize = true;
+            label13.Location = new Point(311, 235);
+            label13.Name = "label13";
+            label13.Size = new Size(44, 15);
+            label13.TabIndex = 9;
+            label13.Text = "label13";
+            // 
+            // label12
+            // 
+            label12.AutoSize = true;
+            label12.Location = new Point(311, 176);
+            label12.Name = "label12";
+            label12.Size = new Size(44, 15);
+            label12.TabIndex = 8;
+            label12.Text = "label12";
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Location = new Point(311, 109);
+            label11.Name = "label11";
+            label11.Size = new Size(44, 15);
+            label11.TabIndex = 7;
+            label11.Text = "label11";
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Location = new Point(311, 75);
+            label10.Name = "label10";
+            label10.Size = new Size(44, 15);
+            label10.TabIndex = 6;
+            label10.Text = "label10";
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Location = new Point(311, 35);
+            label9.Name = "label9";
+            label9.Size = new Size(38, 15);
+            label9.TabIndex = 5;
+            label9.Text = "label9";
             // 
             // label6
             // 
@@ -498,50 +599,20 @@
             label7.TabIndex = 11;
             label7.Text = "store name";
             // 
-            // label9
+            // button12
             // 
-            label9.AutoSize = true;
-            label9.Location = new Point(311, 35);
-            label9.Name = "label9";
-            label9.Size = new Size(38, 15);
-            label9.TabIndex = 5;
-            label9.Text = "label9";
-            // 
-            // label10
-            // 
-            label10.AutoSize = true;
-            label10.Location = new Point(311, 75);
-            label10.Name = "label10";
-            label10.Size = new Size(44, 15);
-            label10.TabIndex = 6;
-            label10.Text = "label10";
-            // 
-            // label11
-            // 
-            label11.AutoSize = true;
-            label11.Location = new Point(311, 109);
-            label11.Name = "label11";
-            label11.Size = new Size(44, 15);
-            label11.TabIndex = 7;
-            label11.Text = "label11";
-            // 
-            // label12
-            // 
-            label12.AutoSize = true;
-            label12.Location = new Point(311, 176);
-            label12.Name = "label12";
-            label12.Size = new Size(44, 15);
-            label12.TabIndex = 8;
-            label12.Text = "label12";
-            // 
-            // label13
-            // 
-            label13.AutoSize = true;
-            label13.Location = new Point(311, 235);
-            label13.Name = "label13";
-            label13.Size = new Size(44, 15);
-            label13.TabIndex = 9;
-            label13.Text = "label13";
+            button12.BackColor = Color.FromArgb(169, 175, 126);
+            button12.FlatAppearance.BorderSize = 0;
+            button12.FlatStyle = FlatStyle.Flat;
+            button12.Font = new Font("Nirmala UI", 14F, FontStyle.Bold, GraphicsUnit.Point);
+            button12.ForeColor = Color.White;
+            button12.Location = new Point(587, 407);
+            button12.Name = "button12";
+            button12.Size = new Size(109, 96);
+            button12.TabIndex = 12;
+            button12.Text = "Order";
+            button12.UseVisualStyleBackColor = false;
+            button12.Click += button12_Click;
             // 
             // Cashier
             // 
@@ -549,6 +620,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(125, 143, 105);
             ClientSize = new Size(1090, 729);
+            Controls.Add(button12);
             Controls.Add(label7);
             Controls.Add(panel3);
             Controls.Add(helpButton);
@@ -562,6 +634,8 @@
             Name = "Cashier";
             Text = "Cashier";
             Load += Cashier_Load_1;
+            ucPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)selectedItemsGridView).EndInit();
             panel10.ResumeLayout(false);
             panel10.PerformLayout();
             panel3.ResumeLayout(false);
@@ -612,5 +686,10 @@
         private Label label9;
         private Label label13;
         private Label label12;
+        private Button button12;
+        private DataGridView selectedItemsGridView;
+        private DataGridViewTextBoxColumn productName;
+        private DataGridViewTextBoxColumn quantity;
+        private DataGridViewTextBoxColumn price;
     }
 }
