@@ -16,6 +16,8 @@ namespace POS_FO
     public partial class Order : Form
     {
 
+
+
         private MySqlConnection connection;
         private const string ConnectionString = "Server=localhost;Port=3306;Database=pos;Uid=root;Password=";
 
@@ -90,6 +92,8 @@ namespace POS_FO
             FilterAndDisplayProducts("Vegetable");
         }
 
+        double subTotal = 0;
+
         private void button11_Click(object sender, EventArgs e)
         {
             if (dataGridView1.SelectedRows.Count > 0)
@@ -98,18 +102,41 @@ namespace POS_FO
 
                 // Get the values from the selected row
                 string productName = selectedRow.Cells["productName"].Value.ToString();
-                
+                string productCategory = selectedRow.Cells["category"].Value.ToString();
                 string productQuantity = selectedRow.Cells["quantity"].Value.ToString();
                 string productPrice = selectedRow.Cells["price"].Value.ToString();
 
                 // Access the "Cashier" form and add the selected item
                 Cashier cashierForm = Application.OpenForms.OfType<Cashier>().FirstOrDefault();
-                cashierForm?.AddSelectedItems(productName, productQuantity, productPrice);
+                cashierForm?.AddSelectedItems(productName,productCategory, productQuantity, productPrice);
+
+                int conversionQuantity = int.Parse(productQuantity);
+
+                double conversionPrice = double.Parse(productPrice);
+                subTotal += conversionPrice;
+
+                double totalPrice = (subTotal * 0.2) + subTotal;
+                
+
+                Label priceString = cashierForm.LABEL9;
+                priceString.Text = subTotal.ToString();
+
+                Label taxLabel = cashierForm.LABEL11;
+                taxLabel.Text = "20%";
+
+                Label totalPriceLabel = cashierForm.LABEL12;
+                totalPriceLabel.Text = totalPrice.ToString();
+
             }
             else
             {
                 MessageBox.Show("Please select a row in the DataGridView.");
             }
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
     }
