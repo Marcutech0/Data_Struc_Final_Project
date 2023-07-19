@@ -96,6 +96,10 @@ namespace POS_FO
 
         private void button11_Click(object sender, EventArgs e)
         {
+            //dunno where to put this x'D but i'll leave it here! it shows the addItemQty winforms when u press the button
+            addItemQty qty = new addItemQty();
+            qty.Show();
+
             if (dataGridView1.SelectedRows.Count > 0)
             {
                 DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
