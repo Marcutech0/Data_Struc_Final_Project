@@ -70,12 +70,24 @@ namespace POS_FO
 
         public void cardPayment()
         {
+            MessageBox.Show("Please swipe your card.");
 
+            label9.Text = "0.00";
+            label10.Text = "0.00";
+            label11.Text = "0.00";
+            label12.Text = "0.00";
+            label13.Text = "0.00";
         }
 
         public void mobilewalletPayment()
         {
+            MessageBox.Show("Please scan the QR code.");
 
+            label9.Text = "0.00";
+            label10.Text = "0.00";
+            label11.Text = "0.00";
+            label12.Text = "0.00";
+            label13.Text = "0.00";
         }
         public Cashier()
         {
@@ -297,11 +309,13 @@ namespace POS_FO
             switch (comboBoxOption)
             {
                 case "Credit/Debit Card":
+                    cardPayment();
                     break;
                 case "Cash":
                     cashPayment();
                     break;
                 case "Mobile Wallet":
+                    mobilewalletPayment();
                     break;
             }
 
