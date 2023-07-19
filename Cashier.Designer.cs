@@ -33,6 +33,7 @@
             ucPanel = new Panel();
             selectedItemsGridView = new DataGridView();
             productName = new DataGridViewTextBoxColumn();
+            Category = new DataGridViewTextBoxColumn();
             quantity = new DataGridViewTextBoxColumn();
             price = new DataGridViewTextBoxColumn();
             panel10 = new Panel();
@@ -100,7 +101,7 @@
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
             selectedItemsGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             selectedItemsGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            selectedItemsGridView.Columns.AddRange(new DataGridViewColumn[] { productName, quantity, price });
+            selectedItemsGridView.Columns.AddRange(new DataGridViewColumn[] { productName, Category, quantity, price });
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = SystemColors.Window;
             dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
@@ -121,16 +122,25 @@
             productName.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             productName.HeaderText = "Product Name";
             productName.Name = "productName";
+            productName.ReadOnly = true;
+            // 
+            // Category
+            // 
+            Category.HeaderText = "Category";
+            Category.Name = "Category";
+            Category.ReadOnly = true;
             // 
             // quantity
             // 
             quantity.HeaderText = "Quantity";
             quantity.Name = "quantity";
+            quantity.ReadOnly = true;
             // 
             // price
             // 
             price.HeaderText = "Price";
             price.Name = "price";
+            price.ReadOnly = true;
             // 
             // panel10
             // 
@@ -490,45 +500,54 @@
             // label13
             // 
             label13.AutoSize = true;
-            label13.Location = new Point(311, 235);
+            label13.Font = new Font("Nirmala UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label13.ForeColor = Color.White;
+            label13.Location = new Point(311, 230);
             label13.Name = "label13";
-            label13.Size = new Size(44, 15);
+            label13.Size = new Size(60, 20);
             label13.TabIndex = 9;
             label13.Text = "label13";
             // 
             // label12
             // 
             label12.AutoSize = true;
-            label12.Location = new Point(311, 176);
+            label12.Font = new Font("Nirmala UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label12.ForeColor = Color.White;
+            label12.Location = new Point(311, 171);
             label12.Name = "label12";
-            label12.Size = new Size(44, 15);
+            label12.Size = new Size(0, 20);
             label12.TabIndex = 8;
-            label12.Text = "label12";
             // 
             // label11
             // 
             label11.AutoSize = true;
-            label11.Location = new Point(311, 109);
+            label11.Font = new Font("Nirmala UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label11.ForeColor = Color.White;
+            label11.Location = new Point(311, 105);
             label11.Name = "label11";
-            label11.Size = new Size(44, 15);
+            label11.Size = new Size(60, 20);
             label11.TabIndex = 7;
             label11.Text = "label11";
             // 
             // label10
             // 
             label10.AutoSize = true;
-            label10.Location = new Point(311, 75);
+            label10.Font = new Font("Nirmala UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label10.ForeColor = Color.White;
+            label10.Location = new Point(311, 70);
             label10.Name = "label10";
-            label10.Size = new Size(44, 15);
+            label10.Size = new Size(60, 20);
             label10.TabIndex = 6;
             label10.Text = "label10";
             // 
             // label9
             // 
             label9.AutoSize = true;
-            label9.Location = new Point(311, 35);
+            label9.Font = new Font("Nirmala UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label9.ForeColor = Color.White;
+            label9.Location = new Point(311, 30);
             label9.Name = "label9";
-            label9.Size = new Size(38, 15);
+            label9.Size = new Size(51, 20);
             label9.TabIndex = 5;
             label9.Text = "label9";
             // 
@@ -689,6 +708,7 @@
         private Button button12;
         private DataGridView selectedItemsGridView;
         private DataGridViewTextBoxColumn productName;
+        private DataGridViewTextBoxColumn Category;
         private DataGridViewTextBoxColumn quantity;
         private DataGridViewTextBoxColumn price;
     }
