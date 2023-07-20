@@ -28,9 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             dataGridView1 = new DataGridView();
+            productName = new DataGridViewTextBoxColumn();
+            Category = new DataGridViewTextBoxColumn();
+            quantity = new DataGridViewTextBoxColumn();
+            price = new DataGridViewTextBoxColumn();
             button7 = new Button();
             panel10 = new Panel();
             button11 = new Button();
@@ -54,10 +58,6 @@
             button17 = new Button();
             button16 = new Button();
             button15 = new Button();
-            productName = new DataGridViewTextBoxColumn();
-            Category = new DataGridViewTextBoxColumn();
-            quantity = new DataGridViewTextBoxColumn();
-            price = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             panel10.SuspendLayout();
             panel1.SuspendLayout();
@@ -68,24 +68,24 @@
             dataGridView1.BackgroundColor = Color.White;
             dataGridView1.BorderStyle = BorderStyle.None;
             dataGridView1.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = Color.FromArgb(169, 175, 126);
-            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle1.ForeColor = Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = Color.Transparent;
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = Color.FromArgb(169, 175, 126);
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = Color.Transparent;
+            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
+            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { productName, Category, quantity, price });
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = SystemColors.Window;
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = Color.Transparent;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
-            dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = SystemColors.Window;
+            dataGridViewCellStyle4.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle4.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = Color.Transparent;
+            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.False;
+            dataGridView1.DefaultCellStyle = dataGridViewCellStyle4;
             dataGridView1.EnableHeadersVisualStyles = false;
             dataGridView1.Location = new Point(12, 12);
             dataGridView1.Name = "dataGridView1";
@@ -93,6 +93,31 @@
             dataGridView1.Size = new Size(664, 705);
             dataGridView1.TabIndex = 0;
             dataGridView1.CellContentClick += dataGridView1_CellContentClick;
+            // 
+            // productName
+            // 
+            productName.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            productName.HeaderText = "Product Name";
+            productName.Name = "productName";
+            productName.ReadOnly = true;
+            // 
+            // Category
+            // 
+            Category.HeaderText = "Category";
+            Category.Name = "Category";
+            Category.ReadOnly = true;
+            // 
+            // quantity
+            // 
+            quantity.HeaderText = "Quantity";
+            quantity.Name = "quantity";
+            quantity.ReadOnly = true;
+            // 
+            // price
+            // 
+            price.HeaderText = "Price";
+            price.Name = "price";
+            price.ReadOnly = true;
             // 
             // button7
             // 
@@ -193,8 +218,9 @@
             removeBtn.Name = "removeBtn";
             removeBtn.Size = new Size(157, 38);
             removeBtn.TabIndex = 9;
-            removeBtn.Text = "Remove Item";
+            removeBtn.Text = "Confirm Order";
             removeBtn.UseVisualStyleBackColor = false;
+            removeBtn.Click += removeBtn_Click;
             // 
             // button10
             // 
@@ -425,31 +451,6 @@
             button15.Text = "Meal";
             button15.UseVisualStyleBackColor = false;
             button15.Click += button15_Click;
-            // 
-            // productName
-            // 
-            productName.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            productName.HeaderText = "Product Name";
-            productName.Name = "productName";
-            productName.ReadOnly = true;
-            // 
-            // Category
-            // 
-            Category.HeaderText = "Category";
-            Category.Name = "Category";
-            Category.ReadOnly = true;
-            // 
-            // quantity
-            // 
-            quantity.HeaderText = "Quantity";
-            quantity.Name = "quantity";
-            quantity.ReadOnly = true;
-            // 
-            // price
-            // 
-            price.HeaderText = "Price";
-            price.Name = "price";
-            price.ReadOnly = true;
             // 
             // Order
             // 

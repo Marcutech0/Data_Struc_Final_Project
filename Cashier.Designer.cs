@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             ucPanel = new Panel();
             selectedItemsGridView = new DataGridView();
             productName = new DataGridViewTextBoxColumn();
@@ -92,24 +92,24 @@
             selectedItemsGridView.BackgroundColor = Color.White;
             selectedItemsGridView.BorderStyle = BorderStyle.None;
             selectedItemsGridView.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = Color.FromArgb(169, 175, 126);
-            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle1.ForeColor = Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = Color.Transparent;
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            selectedItemsGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = Color.FromArgb(169, 175, 126);
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = Color.Transparent;
+            dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
+            selectedItemsGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             selectedItemsGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             selectedItemsGridView.Columns.AddRange(new DataGridViewColumn[] { productName, Category, quantity, price });
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = SystemColors.Window;
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = Color.Transparent;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
-            selectedItemsGridView.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = SystemColors.Window;
+            dataGridViewCellStyle4.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle4.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = Color.Transparent;
+            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.False;
+            selectedItemsGridView.DefaultCellStyle = dataGridViewCellStyle4;
             selectedItemsGridView.EnableHeadersVisualStyles = false;
             selectedItemsGridView.Location = new Point(0, 0);
             selectedItemsGridView.Name = "selectedItemsGridView";
@@ -504,9 +504,9 @@
             label13.ForeColor = Color.White;
             label13.Location = new Point(311, 230);
             label13.Name = "label13";
-            label13.Size = new Size(60, 20);
+            label13.Size = new Size(40, 20);
             label13.TabIndex = 9;
-            label13.Text = "label13";
+            label13.Text = "0.00";
             // 
             // label12
             // 
@@ -515,8 +515,9 @@
             label12.ForeColor = Color.White;
             label12.Location = new Point(311, 171);
             label12.Name = "label12";
-            label12.Size = new Size(0, 20);
+            label12.Size = new Size(40, 20);
             label12.TabIndex = 8;
+            label12.Text = "0.00";
             // 
             // label11
             // 
@@ -525,9 +526,9 @@
             label11.ForeColor = Color.White;
             label11.Location = new Point(311, 105);
             label11.Name = "label11";
-            label11.Size = new Size(60, 20);
+            label11.Size = new Size(40, 20);
             label11.TabIndex = 7;
-            label11.Text = "label11";
+            label11.Text = "0.00";
             // 
             // label10
             // 
@@ -536,9 +537,9 @@
             label10.ForeColor = Color.White;
             label10.Location = new Point(311, 70);
             label10.Name = "label10";
-            label10.Size = new Size(60, 20);
+            label10.Size = new Size(40, 20);
             label10.TabIndex = 6;
-            label10.Text = "label10";
+            label10.Text = "0.00";
             // 
             // label9
             // 
@@ -547,9 +548,10 @@
             label9.ForeColor = Color.White;
             label9.Location = new Point(311, 30);
             label9.Name = "label9";
-            label9.Size = new Size(51, 20);
+            label9.Size = new Size(40, 20);
             label9.TabIndex = 5;
-            label9.Text = "label9";
+            label9.Text = "0.00";
+            label9.Click += label9_Click;
             // 
             // label6
             // 

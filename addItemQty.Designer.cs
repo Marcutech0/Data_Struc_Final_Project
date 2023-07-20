@@ -74,6 +74,7 @@
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(281, 23);
             textBox1.TabIndex = 3;
+            textBox1.TextChanged += textBox1_TextChanged;
             // 
             // button11
             // 
@@ -88,6 +89,7 @@
             button11.TabIndex = 11;
             button11.Text = "Confirm";
             button11.UseVisualStyleBackColor = false;
+            button11.Click += button11_Click;
             // 
             // addItemQty
             // 

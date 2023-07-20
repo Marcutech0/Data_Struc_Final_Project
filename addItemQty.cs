@@ -16,5 +16,21 @@ namespace POS_FO
         {
             InitializeComponent();
         }
+
+        public int quantity;
+        public string quantityString;
+        private void button11_Click(object sender, EventArgs e)
+        {
+            string quantityString = textBox1.Text;
+            quantity = Convert.ToInt32(quantityString);
+            this.Close();
+        }
+
+
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

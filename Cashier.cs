@@ -37,6 +37,8 @@ namespace POS_FO
                         string retrievedProductQuantity = reader.GetString("quantity");
                         string retrievedProductPrice = reader.GetString("price");
 
+                        
+
                         // Add the retrieved product details to the DataGridView in the "Cashier" form
                         selectedItemsGridView.Rows.Add(retrievedProductName, retrievedProductCategory, retrievedProductQuantity, retrievedProductPrice);
 
@@ -65,7 +67,13 @@ namespace POS_FO
 
             label13.Text = roundedValue.ToString();
 
-            
+            if (paymentValue < totalAmount)
+            {
+                MessageBox.Show("Please provide a sufficient amount");
+                label2.Text = "";
+            }
+
+
         }
 
         public void cardPayment()
@@ -343,6 +351,11 @@ namespace POS_FO
         }
 
         private void selectedItemsGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void label9_Click(object sender, EventArgs e)
         {
 
         }

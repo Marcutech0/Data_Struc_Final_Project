@@ -6,6 +6,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -97,11 +98,31 @@ namespace POS_FO
         private void button11_Click(object sender, EventArgs e)
         {
             //dunno where to put this x'D but i'll leave it here! it shows the addItemQty winforms when u press the button
-            addItemQty qty = new addItemQty();
-            qty.Show();
+            if (dataGridView1.SelectedRows.Count > 0 )
+            {
+                addItemQty qty = new addItemQty();
+                qty.Show();
+            } else
+            {
+                MessageBox.Show("Please select a row in the DataGridView.");
+            }
 
+        }
+
+
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void removeBtn_Click(object sender, EventArgs e)
+        {
             if (dataGridView1.SelectedRows.Count > 0)
             {
+               
+
+                
                 DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
 
                 // Get the values from the selected row
@@ -110,17 +131,17 @@ namespace POS_FO
                 string productQuantity = selectedRow.Cells["quantity"].Value.ToString();
                 string productPrice = selectedRow.Cells["price"].Value.ToString();
 
+
                 // Access the "Cashier" form and add the selected item
                 Cashier cashierForm = Application.OpenForms.OfType<Cashier>().FirstOrDefault();
-                cashierForm?.AddSelectedItems(productName,productCategory, productQuantity, productPrice);
+                cashierForm?.AddSelectedItems(productName, productCategory, productQuantity, productPrice);
 
-                int conversionQuantity = int.Parse(productQuantity);
 
                 double conversionPrice = double.Parse(productPrice);
                 subTotal += conversionPrice;
 
                 double totalPrice = (subTotal * 0.2) + subTotal;
-                
+
 
                 Label priceString = cashierForm.LABEL9;
                 priceString.Text = subTotal.ToString();
@@ -136,12 +157,6 @@ namespace POS_FO
             {
                 MessageBox.Show("Please select a row in the DataGridView.");
             }
-
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }
