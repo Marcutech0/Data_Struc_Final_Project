@@ -98,11 +98,12 @@ namespace POS_FO
         private void button11_Click(object sender, EventArgs e)
         {
             //dunno where to put this x'D but i'll leave it here! it shows the addItemQty winforms when u press the button
-            if (dataGridView1.SelectedRows.Count > 0 )
+            if (dataGridView1.SelectedRows.Count > 0)
             {
                 addItemQty qty = new addItemQty();
                 qty.Show();
-            } else
+            }
+            else
             {
                 MessageBox.Show("Please select a row in the DataGridView.");
             }
@@ -115,14 +116,12 @@ namespace POS_FO
         {
 
         }
-
         private void removeBtn_Click(object sender, EventArgs e)
         {
             if (dataGridView1.SelectedRows.Count > 0)
             {
-               
 
-                
+
                 DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
 
                 // Get the values from the selected row
@@ -131,10 +130,23 @@ namespace POS_FO
                 string productQuantity = selectedRow.Cells["quantity"].Value.ToString();
                 string productPrice = selectedRow.Cells["price"].Value.ToString();
 
+                double PRICE;
+                int PRODUCTQUANTITY;
+
+                productQuantity = addItemQty.quantityString;
+                PRODUCTQUANTITY = Convert.ToInt32(productQuantity);
+
+                PRICE = double.Parse(productPrice);
+                double TOTALPRODUCTPRICE = PRICE * PRODUCTQUANTITY;
+
+                productPrice = TOTALPRODUCTPRICE.ToString();
+                
 
                 // Access the "Cashier" form and add the selected item
                 Cashier cashierForm = Application.OpenForms.OfType<Cashier>().FirstOrDefault();
                 cashierForm?.AddSelectedItems(productName, productCategory, productQuantity, productPrice);
+
+
 
 
                 double conversionPrice = double.Parse(productPrice);
@@ -158,5 +170,7 @@ namespace POS_FO
                 MessageBox.Show("Please select a row in the DataGridView.");
             }
         }
+
+
     }
 }

@@ -37,7 +37,8 @@ namespace POS_FO
                         string retrievedProductQuantity = reader.GetString("quantity");
                         string retrievedProductPrice = reader.GetString("price");
 
-                        
+                       
+
 
                         // Add the retrieved product details to the DataGridView in the "Cashier" form
                         selectedItemsGridView.Rows.Add(retrievedProductName, retrievedProductCategory, retrievedProductQuantity, retrievedProductPrice);
