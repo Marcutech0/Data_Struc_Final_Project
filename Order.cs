@@ -1,5 +1,6 @@
 ﻿using MySql.Data.MySqlClient;
 using MySqlX.XDevAPI.Common;
+using POS_FO.UserControls;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -120,38 +121,56 @@ namespace POS_FO
         {
             if (dataGridView1.SelectedRows.Count > 0)
             {
-               
-
-                
                 DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
 
-                // Get the values from the selected row
                 string productName = selectedRow.Cells["productName"].Value.ToString();
-                string productCategory = selectedRow.Cells["category"].Value.ToString();
-                string productQuantity = selectedRow.Cells["quantity"].Value.ToString();
                 string productPrice = selectedRow.Cells["price"].Value.ToString();
 
-
-                // Access the "Cashier" form and add the selected item
-                Cashier cashierForm = Application.OpenForms.OfType<Cashier>().FirstOrDefault();
-                cashierForm?.AddSelectedItems(productName, productCategory, productQuantity, productPrice);
-
-
+              
                 double conversionPrice = double.Parse(productPrice);
+                double totalPrice = (conversionPrice * 0.2) + conversionPrice;
+
+                try
+                {
+                    using (connection = new MySqlConnection(ConnectionString))
+                    {
+                        connection.Open();
+
+                        string insertQuery = "INSERT INTO sales_log (username, productName, revenue, discount) VALUES (@username, @productName, @revenue, @discount)";
+                        using (MySqlCommand command = new MySqlCommand(insertQuery, connection))
+                        {
+                            
+                            command.Parameters.AddWithValue("@username", "usernew");
+                            command.Parameters.AddWithValue("@productName", productName);
+                            command.Parameters.AddWithValue("@revenue", totalPrice);
+                            command.Parameters.AddWithValue("@discount", "20%");
+
+                            command.ExecuteNonQuery();
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error accessing the database: " + ex.Message);
+                }
+
+                
+                Cashier cashierForm = Application.OpenForms.OfType<Cashier>().FirstOrDefault();
+                cashierForm?.AddSelectedItems(productName, "", "1", productPrice);
+
+                double subTotal = double.Parse(cashierForm.LABEL9.Text);
                 subTotal += conversionPrice;
+                cashierForm.LABEL9.Text = subTotal.ToString();
 
-                double totalPrice = (subTotal * 0.2) + subTotal;
+                double totalPriceWithTax = (subTotal * 0.2) + subTotal;
+                cashierForm.LABEL12.Text = totalPriceWithTax.ToString();
+                cashierForm.LABEL11.Text = "20%";
 
+             
+                dataGridView1.ClearSelection();
 
-                Label priceString = cashierForm.LABEL9;
-                priceString.Text = subTotal.ToString();
-
-                Label taxLabel = cashierForm.LABEL11;
-                taxLabel.Text = "20%";
-
-                Label totalPriceLabel = cashierForm.LABEL12;
-                totalPriceLabel.Text = totalPrice.ToString();
-
+                SalesLog salesLog = Application.OpenForms.OfType<SalesLog>().FirstOrDefault();
+                salesLog?.putinsidesaleslog();
             }
             else
             {

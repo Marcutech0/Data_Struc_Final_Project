@@ -15,7 +15,7 @@ namespace POS_FO
         public Discount()
         {
             InitializeComponent();
-            
+            test();
         }
         public void  test()
         {
@@ -23,6 +23,7 @@ namespace POS_FO
             string text = cashier.LABEL12.Text;
             textBox1.Text = text;
         }
+
         private void Discount_Load(object sender, EventArgs e)
         {
 

@@ -37,7 +37,7 @@ namespace POS_FO
                         string retrievedProductQuantity = reader.GetString("quantity");
                         string retrievedProductPrice = reader.GetString("price");
 
-                        
+
 
                         // Add the retrieved product details to the DataGridView in the "Cashier" form
                         selectedItemsGridView.Rows.Add(retrievedProductName, retrievedProductCategory, retrievedProductQuantity, retrievedProductPrice);
@@ -240,7 +240,9 @@ namespace POS_FO
         {
             SalesLog salesLog = new SalesLog();
             addUserControl(salesLog);
-        }
+          
+
+            }
 
         private void addItemButton_Click_1(object sender, EventArgs e)
         {
@@ -329,38 +331,11 @@ namespace POS_FO
 
         }
 
-        /*do this tmr
-         * make new button for after inputting the numbers auto search
-         * constructor for the button click event
-         * i cant see anything :-(
-         */
-        private void findproduact(string productId)
-        {
-            string query = "SELECT * FROM products WHERE productID = @productId";
-            using (MySqlConnection connection = new MySqlConnection(ConnectionString))
-            {
-                MySqlCommand command = new MySqlCommand(query, connection);
-                command.Parameters.AddWithValue("@productId", productId);
-                connection.Open();
-                MySqlDataReader reader = command.ExecuteReader();
 
-                if (reader.HasRows)
-                {
-                    reader.Read();
-                    string productName = reader.GetString(1);
-                    string productPrice = reader.GetString(2);
-                    MessageBox.Show( productId + productName + productPrice);
-                }
-                else
-                {
-                    MessageBox.Show("Pee");
-                }
-                reader.Close();
-            }
-        }
+        
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-           //grafewjfoia
+            //grafewjfoia
         }
 
         private void button12_Click(object sender, EventArgs e)
