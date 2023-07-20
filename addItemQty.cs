@@ -10,25 +10,23 @@ using System.Windows.Forms;
 
 namespace POS_FO
 {
-    public partial class Discount : Form
+    public partial class addItemQty : Form
     {
-        public Discount()
+        public addItemQty()
         {
             InitializeComponent();
-            
         }
-        public void  test()
-        {
-            Cashier cashier = new Cashier();
-            string text = cashier.LABEL12.Text;
-            textBox1.Text = text;
-        }
-        private void Discount_Load(object sender, EventArgs e)
-        {
 
-            test();
-
+        public int quantity;
+        public string quantityString;
+        private void button11_Click(object sender, EventArgs e)
+        {
+            string quantityString = textBox1.Text;
+            quantity = Convert.ToInt32(quantityString);
+            this.Close();
         }
+
+
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
