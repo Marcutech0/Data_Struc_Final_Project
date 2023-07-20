@@ -12,19 +12,26 @@ namespace POS_FO
 {
     public partial class addItemQty : Form
     {
+        
         public addItemQty()
         {
             InitializeComponent();
+            
         }
+       
 
         public int quantity;
-        public string quantityString;
+        public static string quantityString;
         private void button11_Click(object sender, EventArgs e)
         {
-            string quantityString = textBox1.Text;
-            quantity = Convert.ToInt32(quantityString);
+            quantityString = textBox1.Text;
             this.Close();
+
+            Order order = new Order();
+            
         }
+
+    
 
 
 
