@@ -15,6 +15,8 @@ namespace POS_FO
 {
     public partial class Cashier : Form
     {
+
+
         private Discount? discount;
         private MySqlConnection connection;
         private const string ConnectionString = "Server=localhost;Port=3306;Database=pos;Uid=root;Password=";
@@ -31,42 +33,70 @@ namespace POS_FO
                     if (reader.Read())
                     {
                         string retrievedProductName = reader.GetString("productName");
+                        string retrievedProductCategory = reader.GetString("category");
                         string retrievedProductQuantity = reader.GetString("quantity");
                         string retrievedProductPrice = reader.GetString("price");
 
+                       
+
+
                         // Add the retrieved product details to the DataGridView in the "Cashier" form
-                        selectedItemsGridView.Rows.Add(retrievedProductName, retrievedProductQuantity, retrievedProductPrice);
+                        selectedItemsGridView.Rows.Add(retrievedProductName, retrievedProductCategory, retrievedProductQuantity, retrievedProductPrice);
+
                     }
                 }
             }
         }
-        public void UpdateSelectedItems(string productName, string productQuantity, string productPrice)
+        public void UpdateSelectedItems(string productName, string productCategory, string productQuantity, string productPrice)
         {
-            selectedItemsGridView.Rows.Add(productName, productQuantity, productPrice);
+            selectedItemsGridView.Rows.Add(productName, productCategory, productQuantity, productPrice);
         }
-        public void AddSelectedItems(string productName, string productQuantity, string productPrice)
+        public void AddSelectedItems(string productName, string productCategory, string productQuantity, string productPrice)
         {
-            selectedItemsGridView.Rows.Add(productName, productQuantity, productPrice);
+            selectedItemsGridView.Rows.Add(productName, productCategory, productQuantity, productPrice);
         }
         public void cashPayment()
         {
-            double subTotalAmount, totalAmount, change;
-            double tax = 0.2;
+            double subTotalAmount, totalAmount, change, roundedValue;
 
             double paymentValue = double.Parse(label2.Text);
 
-            // totalAmount = subTotalAmount + (tax * subTotalAmount);
-            // change = paymentValue - totalAmount;
+            totalAmount = double.Parse(label12.Text);
+
+            change = paymentValue - totalAmount;
+            roundedValue = Math.Round(change, 2);
+
+            label13.Text = roundedValue.ToString();
+
+            if (paymentValue < totalAmount)
+            {
+                MessageBox.Show("Please provide a sufficient amount");
+                label2.Text = "";
+            }
+
+
         }
 
         public void cardPayment()
         {
+            MessageBox.Show("Please swipe your card.");
 
+            label9.Text = "0.00";
+            label10.Text = "0.00";
+            label11.Text = "0.00";
+            label12.Text = "0.00";
+            label13.Text = "0.00";
         }
 
         public void mobilewalletPayment()
         {
+            MessageBox.Show("Please scan the QR code.");
 
+            label9.Text = "0.00";
+            label10.Text = "0.00";
+            label11.Text = "0.00";
+            label12.Text = "0.00";
+            label13.Text = "0.00";
         }
         public Cashier()
         {
@@ -246,6 +276,22 @@ namespace POS_FO
 
         }
 
+        public Label LABEL9
+        {
+            get { return label9; }
+        }
+
+        public Label LABEL11
+        {
+            get { return label11; }
+        }
+
+        public Label LABEL12
+        {
+            get { return label12; }
+            set { label12 = value; }
+        }
+
         private void discountButton_Click_1(object sender, EventArgs e)
         {
             discount = new Discount();
@@ -272,10 +318,13 @@ namespace POS_FO
             switch (comboBoxOption)
             {
                 case "Credit/Debit Card":
+                    cardPayment();
                     break;
                 case "Cash":
+                    cashPayment();
                     break;
                 case "Mobile Wallet":
+                    mobilewalletPayment();
                     break;
             }
 
@@ -303,6 +352,11 @@ namespace POS_FO
         }
 
         private void selectedItemsGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void label9_Click(object sender, EventArgs e)
         {
 
         }

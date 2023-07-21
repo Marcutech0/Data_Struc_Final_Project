@@ -32,6 +32,7 @@
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             dataGridView1 = new DataGridView();
             productName = new DataGridViewTextBoxColumn();
+            Category = new DataGridViewTextBoxColumn();
             quantity = new DataGridViewTextBoxColumn();
             price = new DataGridViewTextBoxColumn();
             button7 = new Button();
@@ -76,7 +77,7 @@
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
             dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { productName, quantity, price });
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { productName, Category, quantity, price });
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = SystemColors.Window;
             dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
@@ -91,22 +92,32 @@
             dataGridView1.RowTemplate.Height = 25;
             dataGridView1.Size = new Size(664, 705);
             dataGridView1.TabIndex = 0;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // productName
             // 
             productName.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             productName.HeaderText = "Product Name";
             productName.Name = "productName";
+            productName.ReadOnly = true;
+            // 
+            // Category
+            // 
+            Category.HeaderText = "Category";
+            Category.Name = "Category";
+            Category.ReadOnly = true;
             // 
             // quantity
             // 
             quantity.HeaderText = "Quantity";
             quantity.Name = "quantity";
+            quantity.ReadOnly = true;
             // 
             // price
             // 
             price.HeaderText = "Price";
             price.Name = "price";
+            price.ReadOnly = true;
             // 
             // button7
             // 
@@ -207,8 +218,9 @@
             removeBtn.Name = "removeBtn";
             removeBtn.Size = new Size(157, 38);
             removeBtn.TabIndex = 9;
-            removeBtn.Text = "Remove Item";
+            removeBtn.Text = "Confirm Order";
             removeBtn.UseVisualStyleBackColor = false;
+            removeBtn.Click += removeBtn_Click;
             // 
             // button10
             // 
@@ -223,6 +235,7 @@
             button10.TabIndex = 5;
             button10.Text = "0";
             button10.UseVisualStyleBackColor = false;
+            button10.Click += button10_Click;
             // 
             // button9
             // 
@@ -459,6 +472,11 @@
             ResumeLayout(false);
         }
 
+        private void button10_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
         #endregion
 
         private DataGridView dataGridView1;
@@ -486,6 +504,7 @@
         private Button button16;
         private Button button15;
         private DataGridViewTextBoxColumn productName;
+        private DataGridViewTextBoxColumn Category;
         private DataGridViewTextBoxColumn quantity;
         private DataGridViewTextBoxColumn price;
     }
