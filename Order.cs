@@ -126,35 +126,9 @@ namespace POS_FO
                 string productName = selectedRow.Cells["productName"].Value.ToString();
                 string productPrice = selectedRow.Cells["price"].Value.ToString();
 
-              
                 double conversionPrice = double.Parse(productPrice);
                 double totalPrice = (conversionPrice * 0.2) + conversionPrice;
 
-                try
-                {
-                    using (connection = new MySqlConnection(ConnectionString))
-                    {
-                        connection.Open();
-
-                        string insertQuery = "INSERT INTO sales_log (username, productName, revenue, discount) VALUES (@username, @productName, @revenue, @discount)";
-                        using (MySqlCommand command = new MySqlCommand(insertQuery, connection))
-                        {
-                            
-                            command.Parameters.AddWithValue("@username", "usernew");
-                            command.Parameters.AddWithValue("@productName", productName);
-                            command.Parameters.AddWithValue("@revenue", totalPrice);
-                            command.Parameters.AddWithValue("@discount", "20%");
-
-                            command.ExecuteNonQuery();
-                        }
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error accessing the database: " + ex.Message);
-                }
-
-                
                 Cashier cashierForm = Application.OpenForms.OfType<Cashier>().FirstOrDefault();
                 cashierForm?.AddSelectedItems(productName, "", "1", productPrice);
 
@@ -166,11 +140,7 @@ namespace POS_FO
                 cashierForm.LABEL12.Text = totalPriceWithTax.ToString();
                 cashierForm.LABEL11.Text = "20%";
 
-             
                 dataGridView1.ClearSelection();
-
-                SalesLog salesLog = Application.OpenForms.OfType<SalesLog>().FirstOrDefault();
-                salesLog?.putinsidesaleslog();
             }
             else
             {

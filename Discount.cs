@@ -109,7 +109,7 @@ namespace POS_FO
 
 
 
-        //useless down here-----------------------------
+        //-----------------------------
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 

@@ -20,7 +20,6 @@ namespace POS_FO
         private MySqlConnection connection;
         private const string ConnectionString = "Server=localhost;Port=3306;Database=pos;Uid=root;Password=";
 
-
         public void AddItemToCart(string productName, string productQuantity, string productPrice)
         {
             string selectQuery = "SELECT * FROM products WHERE productName = @productName";
@@ -103,11 +102,6 @@ namespace POS_FO
 
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void Cashier_Load(object sender, EventArgs e)
         {
             categories1.Visible = false;
@@ -140,10 +134,7 @@ namespace POS_FO
             addItems1.Visible = false;
         }
 
-        private void addItemButton_Click(object sender, EventArgs e)
-        {
-        }
-
+     
         private void helpButton_Click(object sender, EventArgs e)
         {
             categories1.Visible = false;
@@ -162,11 +153,6 @@ namespace POS_FO
         private void button1_Click(object sender, EventArgs e)
         {
             label2.Text = label2.Text + "1";
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
 
         }
 
@@ -225,16 +211,10 @@ namespace POS_FO
             label2.Text = "";
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void categoriesButton_Click_1(object sender, EventArgs e)
         {
             Stocks stock = new Stocks();
             addUserControl(stock);
-
         }
 
         private void salesLogButton2_Click(object sender, EventArgs e)
@@ -259,25 +239,6 @@ namespace POS_FO
             userControl.BringToFront();
         }
 
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-        }
-
-
-        private void button11_Click(object sender, EventArgs e)
-        {
-
-        }
-
         public Label LABEL9
         {
             get { return label9; }
@@ -299,7 +260,7 @@ namespace POS_FO
         {
             if (selectedItemsGridView.SelectedRows.Count != 0)
             {
-                //DataGridViewRow row = this.SelectedRows[0];
+                //DataGridViewRow row = selectedItemsGridView.SelectedRows[0];
                 //string cellValue = row.Cells["price"].Value.ToString();
                 //DataGridView row = this.selectedItemsGridView_CellContentClick[];
 
@@ -319,10 +280,6 @@ namespace POS_FO
             discountButton.Enabled = true;
         }
 
-        private void Cashier_Load_1(object sender, EventArgs e)
-        {
-
-        }
 
         private void button11_Click_1(object sender, EventArgs e)
         {
@@ -340,14 +297,6 @@ namespace POS_FO
                     mobilewalletPayment();
                     break;
             }
-
-        }
-
-
-
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
 
         }
 
@@ -369,6 +318,9 @@ namespace POS_FO
 
 
 
+
+        //---------------
+
         private void selectedItemsGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
@@ -380,6 +332,53 @@ namespace POS_FO
         }
 
         private void selectedItemsGridView_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Cashier_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void addItemButton_Click(object sender, EventArgs e)
         {
 
         }
