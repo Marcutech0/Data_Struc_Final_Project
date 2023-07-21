@@ -15,8 +15,7 @@ namespace POS_FO
 {
     public partial class Cashier : Form
     {
-
-
+       
         private Discount? discount;
         private MySqlConnection connection;
         private const string ConnectionString = "Server=localhost;Port=3306;Database=pos;Uid=root;Password=";
@@ -100,6 +99,7 @@ namespace POS_FO
         public Cashier()
         {
             InitializeComponent();
+
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -240,9 +240,9 @@ namespace POS_FO
         {
             SalesLog salesLog = new SalesLog();
             addUserControl(salesLog);
-          
 
-            }
+
+        }
 
         private void addItemButton_Click_1(object sender, EventArgs e)
         {
@@ -293,13 +293,20 @@ namespace POS_FO
             set { label12 = value; }
         }
 
+
         private void discountButton_Click_1(object sender, EventArgs e)
         {
-            discount = new Discount();
-            discount.FormClosed += Discount_FormClosed;
-            discount.Show();
+            if (selectedItemsGridView.SelectedRows.Count != 0)
+            {
+                DataGridViewRow row = selectedItemsGridView.SelectedRows[0];
+                string cellValue = row.Cells["price"].Value.ToString();
 
-            discountButton.Enabled = false;
+                Discount discountForm = new Discount(cellValue, selectedItemsGridView); 
+                discountForm.FormClosed += Discount_FormClosed;
+                discountForm.Show();
+
+                discountButton.Enabled = false;
+            }
         }
 
         private void Discount_FormClosed(object? sender, FormClosedEventArgs e)
@@ -332,16 +339,17 @@ namespace POS_FO
         }
 
 
-        
+
+
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //grafewjfoia
+            
         }
 
         private void button12_Click(object sender, EventArgs e)
         {
             Order order = new Order();
-            order.Show();
+            order.Show();   
         }
 
         private void salesLogButton_Click_1(object sender, EventArgs e)
@@ -354,12 +362,19 @@ namespace POS_FO
             }
         }
 
+
+
         private void selectedItemsGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
 
         private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void selectedItemsGridView_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
 
         }

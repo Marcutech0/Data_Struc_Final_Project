@@ -111,6 +111,7 @@
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(224, 23);
             textBox2.TabIndex = 6;
+            textBox2.TextChanged += textBox2_TextChanged;
             // 
             // textBox3
             // 
@@ -119,6 +120,7 @@
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(224, 23);
             textBox3.TabIndex = 7;
+            textBox3.TextChanged += textBox3_TextChanged;
             // 
             // button11
             // 
@@ -133,6 +135,7 @@
             button11.TabIndex = 10;
             button11.Text = "Confirm";
             button11.UseVisualStyleBackColor = false;
+            button11.Click += button11_Click;
             // 
             // Discount
             // 

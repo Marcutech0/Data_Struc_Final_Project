@@ -116,6 +116,7 @@
             selectedItemsGridView.RowTemplate.Height = 25;
             selectedItemsGridView.Size = new Size(569, 628);
             selectedItemsGridView.TabIndex = 13;
+            selectedItemsGridView.CellContentClick += selectedItemsGridView_CellContentClick_1;
             // 
             // productName
             // 
