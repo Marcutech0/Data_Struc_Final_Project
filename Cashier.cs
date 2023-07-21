@@ -15,10 +15,11 @@ namespace POS_FO
 {
     public partial class Cashier : Form
     {
-       
+
         private Discount? discount;
         private MySqlConnection connection;
         private const string ConnectionString = "Server=localhost;Port=3306;Database=pos;Uid=root;Password=";
+
 
         public void AddItemToCart(string productName, string productQuantity, string productPrice)
         {
@@ -298,10 +299,14 @@ namespace POS_FO
         {
             if (selectedItemsGridView.SelectedRows.Count != 0)
             {
+                //DataGridViewRow row = this.SelectedRows[0];
+                //string cellValue = row.Cells["price"].Value.ToString();
+                //DataGridView row = this.selectedItemsGridView_CellContentClick[];
+
                 DataGridViewRow row = selectedItemsGridView.SelectedRows[0];
                 string cellValue = row.Cells["price"].Value.ToString();
 
-                Discount discountForm = new Discount(cellValue, selectedItemsGridView); 
+                Discount discountForm = new Discount(cellValue, selectedItemsGridView);
                 discountForm.FormClosed += Discount_FormClosed;
                 discountForm.Show();
 
@@ -343,13 +348,13 @@ namespace POS_FO
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+
         }
 
         private void button12_Click(object sender, EventArgs e)
         {
             Order order = new Order();
-            order.Show();   
+            order.Show();
         }
 
         private void salesLogButton_Click_1(object sender, EventArgs e)
