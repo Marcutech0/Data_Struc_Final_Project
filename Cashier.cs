@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using POS_FO.UserControls;
 using static System.Net.Mime.MediaTypeNames;
+using Application = System.Windows.Forms.Application;
 
 namespace POS_FO
 {
@@ -37,7 +38,7 @@ namespace POS_FO
                         string retrievedProductQuantity = reader.GetString("quantity");
                         string retrievedProductPrice = reader.GetString("price");
 
-                       
+
 
 
                         // Add the retrieved product details to the DataGridView in the "Cashier" form
@@ -359,6 +360,16 @@ namespace POS_FO
         private void label9_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void exitButton_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Are you sure you want to exit?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
     }
 }

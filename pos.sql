@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 11, 2023 at 01:57 AM
+-- Generation Time: Jul 21, 2023 at 03:09 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -42,6 +42,28 @@ CREATE TABLE `products` (
 INSERT INTO `products` (`productID`, `productName`, `productCategory`, `productQuantity`, `productPrice`) VALUES
 (10, 'SkyFlakes', 'Snack', 100, 10),
 (11, 'CocaCola (can)', 'Drink', 42, 28);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `sales_log`
+--
+
+CREATE TABLE `sales_log` (
+  `username` varchar(255) NOT NULL,
+  `productName` varchar(255) NOT NULL,
+  `revenue` int(11) NOT NULL,
+  `discount` int(11) NOT NULL,
+  `timestamp` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `sales_log`
+--
+
+INSERT INTO `sales_log` (`username`, `productName`, `revenue`, `discount`, `timestamp`) VALUES
+('usernew', 'SkyFlakes', 5, 50, '2023-07-21 12:48:41'),
+('usernew', 'CocaCola (can)', 14, 50, '2023-07-21 12:52:16');
 
 -- --------------------------------------------------------
 
